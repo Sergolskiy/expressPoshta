@@ -22,28 +22,13 @@ html(lang="en")
       block content
     else
       .page__wrapper
-        if pageClass === "catalog-page"
-          include _header-alt2
-        else
-          include _header
+        include _header
 
         main.page__content
           block content
 
         include _footer
 
-    if pageClass === "product-page"
-      include ../components/popups/_popup_buy_product
     block scripts
       script(src='./libs/js/libs-bundle.min.js?' + parseInt(Math.random()*1000))
       script(src='./js/index.min.js?' + parseInt(Math.random()*1000))
-      if pageClass === "add-product-page"
-        script(src='./js/add_product.min.js?' + parseInt(Math.random()*1000))
-      if pageClass === "product-page"
-        script(src='./js/product_single.min.js?' + parseInt(Math.random() * 1000))
-      if pageClass === "make-order-page"
-        script(src='./js/order.min.js?' + parseInt(Math.random() * 1000))
-      if pageClass === "account-reviews-page"
-        script(src='./js/account_reviews.min.js?' + parseInt(Math.random() * 1000))
-      if pageClass === "account-shop-page"
-        script(src='./js/account_shop.min.js?' + parseInt(Math.random() * 1000))

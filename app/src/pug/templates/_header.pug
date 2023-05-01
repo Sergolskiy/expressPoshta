@@ -1,46 +1,49 @@
 header.header
-    .header__inner
-        .header__logo
-            img
-        .header__column
-            .header__top
-                .header__munu-wrap
-                    ul.header__menu
-                        li.header__menu-item
-                            a(href="#").header__menu-link
-                        li.header__menu-item
-                            a(href="#").header__menu-link
-                        li.header__menu-item
-                            a(href="#").header__menu-link
-                        li.header__menu-item
-                            a(href="#").header__menu-link
-                        li.header__menu-item
-                            a(href="#").header__menu-link
-                        li.header__menu-item
-                            a(href="#").header__menu-link
-                .header__languages
-                    .header__selected
-                    .header__languages-items
-                        .header__languages-item
-                        .header__languages-item
+    .container
+        .header__inner
+            .header__logo
+                a(href='#')
+                    img(src="./img/logo.svg" alt='logo')
+            .header__column
+                .header__top
+                    .header__munu-wrap
+                        ul.header__menu
+                            li.header__menu-item
+                                a(href="#").header__menu-link Як відправити
+                            li.header__menu-item
+                                a(href="#").header__menu-link Терміни доставки
+                            li.header__menu-item
+                                a(href="#").header__menu-link Тарифи
+                            li.header__menu-item
+                                a(href="#").header__menu-link Калькулятор
+                            li.header__menu-item
+                                a(href="#").header__menu-link Питання/Відповідь
+                            li.header__menu-item
+                                a(href="#").header__menu-link Контакти
+                    .header__languages
+                        .header__languages-selected Ua
+                        .header__languages-items
+                            .header__languages-item Ua
+                            .header__languages-item En
 
-                .header__phone
-                    a(href="tel:")
-                .header__solial
-                    .header__social
-                        .header__social-item
-                            //include ../img/category_icons/cake.svg
-                        .header__social-item
-                            //include ../img/category_icons/cake.svg
-                        .header__social-item
-                            //include ../img/category_icons/cake.svg
-                .header__button
-                    a(href="#").site-btn
+                    .header__phone
+                        a(href="tel:0800217096") 0 (800) 217-096
+                    .header__solial
+                        .header__social
+                            .header__social-item
+                                include ../../img/home/telegram.svg
+                            .header__social-item
+                                include ../../img/home/phone.svg
+                            .header__social-item
+                                include ../../img/home/viber.svg
+                    .header__button
+                        a(href="#").site-btn Відправити посилку
 
-            .header__bottom
-                .header__search
-                    input.header__search-input(type='text')
-                    a(href='#').site-btn
+                .header__bottom
+                    .header__search
+                        input.header__search-input(type='text' placeholder='Відстежити замовлення')
+                        a(href='#').site-btn.header__search-btn
+                            include ../../img/home/search.svg
 
 
 //include ../components/popups/_popup_location_select

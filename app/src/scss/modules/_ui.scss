@@ -8,7 +8,7 @@ body {
 body {
   background: $white;
   color: #0C1C2A;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-size: 14px;
 }
 
@@ -52,14 +52,14 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .page__wrapper {
-  overflow-x: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
-  .footer {
-    margin-top: auto;
-  }
+  //overflow-x: hidden;
+  //min-height: 100vh;
+  //display: flex;
+  //flex-direction: column;
+  //
+  //.footer {
+  //  margin-top: auto;
+  //}
 }
 
 .page__content {
@@ -73,7 +73,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .container {
-  max-width: 1296px;
+  max-width: 1750px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;

@@ -1,676 +1,675 @@
-extends ./templates/_layout
-
-block vars
-  - var pageTitle = "Homepage";
-  - var pageClass = "homepage";
-  - var pageActive = "homepage";
-
-block content
-  div.main-wrap
-    .section-main.lazyload
-        .container.container--fluid
-            .section-main__wrap
-                .home-menu
-                    .home-menu__title Категорії
-                    ul.home-menu__list
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/flowers.svg
-                                .home-menu__link-text Квіти та букети
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/cake.svg
-                                .home-menu__link-text Кондитерські та пекарні
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/coffee.svg
-                                .home-menu__link-text Чай та кава
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/heart_cat.svg
-                                .home-menu__link-text Подарункові сертифікати
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/jewelry.svg
-                                .home-menu__link-text Прикраси та аксесуари
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/products.svg
-                                .home-menu__link-text Продукти та напої
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/cosmetics.svg
-                                .home-menu__link-text Косметика та парфюмерія
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/house.svg
-                                .home-menu__link-text Для дому
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/pictures.svg
-                                .home-menu__link-text Картини та фото
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/handmade.svg
-                                .home-menu__link-text Хендмейд та хоббі
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/health.svg
-                                .home-menu__link-text Здоровя
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/teddybear.svg
-                                .home-menu__link-text Мякі іграшки
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/stars.svg
-                                .home-menu__link-text Товари для свята
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/books.svg
-                                .home-menu__link-text Книги
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/tableware.svg
-                                .home-menu__link-text Посуд
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/stationery.svg
-                                .home-menu__link-text Канелярські товари
-                        li.home-menu__item
-                            a(href="#").home-menu__link
-                                .home-menu__link-icon
-                                    include ../img/category_icons/other.svg
-                                .home-menu__link-text Інше
-                .home-slider-wrap
-                    .home-slider
-                        .home-slider__nav
-                            .home-slider__nav-btn.home-slider__nav-prev
-                                include ../img/icons/slider_arrow.svg
-                            .home-slider__nav-counter
-                                .home-slider__nav-counter-inner
-                                    span(data-current-slide) 1
-                                    span /
-                                    span(data-slides-count) 4
-                                .home-slider__nav-counter-step.step-1
-                            .home-slider__nav-btn.home-slider__nav-next
-                                include ../img/icons/slider_arrow.svg
-                        .home-slider__pagination
-                        .swiper-wrapper
-                            .swiper-slide
-                                .home-slider__slide
-                                    .home-slider__slide-img
-                                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/slide1.png" alt="slide1").lazyload
-                                    .home-slider__slide-title Подарунки (маркетплейс)
-                                    .home-slider__slide-text Кур'єрська доставка або самовивіз
-                                    a(href="#").btn.home-slider__slide-btn Перейти в каталог
-                            .swiper-slide
-                                .home-slider__slide
-                                    .home-slider__slide-img
-                                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/slide2.png" alt="slide2").lazyload
-                                    .home-slider__slide-title Подарунки (маркетплейс)
-                                    .home-slider__slide-text Кур'єрська доставка або самовивіз
-                                    a(href="#").btn.home-slider__slide-btn Перейти в каталог
-                            .swiper-slide
-                                .home-slider__slide
-                                    .home-slider__slide-img
-                                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/slide3.png" alt="slide3").lazyload
-                                    .home-slider__slide-title Подарунки (маркетплейс)
-                                    .home-slider__slide-text Кур'єрська доставка або самовивіз
-                                    a(href="#").btn.home-slider__slide-btn Перейти в каталог
-                            .swiper-slide
-                                .home-slider__slide
-                                    .home-slider__slide-img
-                                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/slide1.png" alt="slide4").lazyload
-                                    .home-slider__slide-title Подарунки (маркетплейс)
-                                    .home-slider__slide-text Кур'єрська доставка або самовивіз
-                                    a(href="#").btn.home-slider__slide-btn Перейти в каталог
-    .home-background-wrap
-        .section-popular
-            .container
-                .products-block(data-tabs="")
-                    h2.section-title.products-block__title Популярні
-                    .products-block__categories
-                        .products-block__categories-wrap
-                            a(href="javascript:void(0);" data-tab="1").products-block__categories-item.active Картини та фото
-                        .products-block__categories-wrap
-                            a(href="javascript:void(0);" data-tab="2").products-block__categories-item Для дому
-                        .products-block__categories-wrap
-                            a(href="javascript:void(0);" data-tab="3").products-block__categories-item Здоров’я
-                        .products-block__categories-wrap
-                            a(href="javascript:void(0);" data-tab="4").products-block__categories-item М’які іграшки
-                        .products-block__categories-wrap
-                            a(href="javascript:void(0);" data-tab="5").products-block__categories-item Книги
-                    .products-block__list
-                        .products-block-slider
-                            .swiper-wrapper
-                                .swiper-slide
-                                    .product-card
-                                        a(href="#").product-card__img
-                                            .product-card__label -20%
-                                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
-                                        .product-card__content
-                                            a(href="javascript:void(0);").product-card__favorite-btn
-                                                include ../img/icons/heart.svg
-                                            .product-card__rating
-                                                .rating
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                            a(href="#").product-card__title Orci varius natoque penatibus et
-                                            .product-card__price
-                                                .product-card__price-wrap
-                                                    .product-card__current-price 390грн
-                                                    s.product-card__old-price 490грн
-                                                .product-card__price-label
-                                                    .product-card__price-label-icon
-                                                        include ../img/icons/pluses.svg
-                                                    .product-card__price-label-text Діють бонуси
-                                            button.product-card__buy-btn.btn.js-buy-btn Замовити
-                                .swiper-slide
-                                    .product-card
-                                        a(href="#").product-card__img
-                                            .product-card__label.product-card__label--alt -20%
-                                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product2.jpg" alt="product 2").lazyload
-                                        .product-card__content
-                                            a(href="javascript:void(0);").product-card__favorite-btn
-                                                include ../img/icons/heart.svg
-                                            .product-card__rating
-                                                .rating
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                            a(href="#").product-card__title Orci varius natoque penatibus et
-                                            .product-card__price
-                                                .product-card__price-wrap
-                                                    .product-card__current-price 490грн
-                                                .product-card__price-label
-                                                    .product-card__price-label-icon
-                                                        include ../img/icons/pluses.svg
-                                                    .product-card__price-label-text Діють бонуси
-                                            button.product-card__buy-btn.btn.js-buy-btn Замовити
-                                .swiper-slide
-                                    .product-card
-                                        a(href="#").product-card__img
-                                            .product-card__label-svg
-                                                include ../img/icons/discount.svg
-                                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product3.jpg" alt="product 3").lazyload
-                                        .product-card__content
-                                            a(href="javascript:void(0);").product-card__favorite-btn
-                                                include ../img/icons/heart.svg
-                                            .product-card__rating
-                                                .rating
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                            a(href="#").product-card__title Orci varius natoque penatibus et
-                                            .product-card__price
-                                                .product-card__price-wrap
-                                                    .product-card__current-price 490грн
-                                                .product-card__price-label
-                                                    .product-card__price-label-icon
-                                                        include ../img/icons/pluses.svg
-                                                    .product-card__price-label-text Діють бонуси
-                                            button.product-card__buy-btn.btn.js-buy-btn Замовити
-                                .swiper-slide
-                                    .product-card
-                                        a(href="#").product-card__img
-                                            .product-card__label-svg
-                                                include ../img/icons/discount.svg
-                                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
-                                        .product-card__content
-                                            a(href="javascript:void(0);").product-card__favorite-btn
-                                                include ../img/icons/heart.svg
-                                            .product-card__rating
-                                                .rating
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                                    span.rating__star
-                                                        include ../img/icons/rating_star.svg
-                                            a(href="#").product-card__title Orci varius natoque penatibus et
-                                            .product-card__price
-                                                .product-card__price-wrap
-                                                    .product-card__current-price 490грн
-                                                .product-card__price-label
-                                                    .product-card__price-label-icon
-                                                        include ../img/icons/pluses.svg
-                                                    .product-card__price-label-text Діють бонуси
-                                            button.product-card__buy-btn.btn.js-buy-btn Замовити
-                            .products-block-slider__pagination
-        .section-steps
-            .section-steps__wrap
-                .container
-                    .steps-block
-                        .steps-block__list
-                            .steps-block__item
-                                .steps-block__item-icon
-                                    include ../img/icons/gift.svg
-                                .steps-block__item-text Обери подарунки
-                            .steps-block__divide
-                            .steps-block__item
-                                .steps-block__item-icon
-                                    include ../img/icons/truck.svg
-                                .steps-block__item-text Замов доставку або </br>забери сам
-                            .steps-block__divide
-                            .steps-block__item
-                                .steps-block__item-icon
-                                    include ../img/icons/cc.svg
-                                .steps-block__item-text Оплати онлайн </br>або на місці
-                            .steps-block__divide
-                            .steps-block__item
-                                .steps-block__item-icon
-                                    include ../img/icons/star.svg
-                                .steps-block__item-text Отримай бонуси
-                            .steps-block__divide
-                            .steps-block__item
-                                .steps-block__item-icon
-                                    include ../img/icons/speech.svg
-                                .steps-block__item-text Залиш відгук
-    .section-categories
-        .container
-            .home-categories
-                h2.section-title.home-categories__title Категорії
-                .home-categories__list
-                    a(href="#").home-categories__item.home-categories__item--big.home-categories__item--pattern1
-                        .home-categories__item-content
-                            .home-categories__item-title Квіти та букети
-                        .home-categories__item-img
-                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat1.png" alt="category 1").lazyload
-                    a(href="#").home-categories__item.home-categories__item--high.home-categories__item--bright.home-categories__item--pattern2
-                        .home-categories__item-content
-                            .home-categories__item-title Кондитерка</br>та пекарні
-                        .home-categories__item-img
-                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat2.png" alt="category 2").lazyload
-                    a(href="#").home-categories__item
-                        .home-categories__item-content
-                            .home-categories__item-title Сертифікат
-                        .home-categories__item-img
-                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat3.png" alt="category 3").lazyload
-                    a(href="#").home-categories__item.home-categories__item--bright2
-                        .home-categories__item-content
-                            .home-categories__item-title Товари для свята
-                        .home-categories__item-img
-                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat4.png" alt="category 4").lazyload
-                    a(href="#").home-categories__item.home-categories__item--big.home-categories__item--bright.home-categories__item--pattern3
-                        .home-categories__item-content
-                            .home-categories__item-title Категорії
-                        .home-categories__item-img
-                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat5.png" alt="category 5").lazyload
-    .section-might-like
-      .container
-          .products-block(data-tabs="")
-              h2.section-title.products-block__title Вам може сподобатись
-              .products-block__categories
-                  .products-block__categories-wrap
-                      a(href="javascript:void(0);" data-tab="1").products-block__categories-item.active Чай та кава
-                  .products-block__categories-wrap
-                      a(href="javascript:void(0);" data-tab="2").products-block__categories-item Картини та фото
-                  .products-block__categories-wrap
-                      a(href="javascript:void(0);" data-tab="3").products-block__categories-item Канцелярія
-                  .products-block__categories-wrap
-                      a(href="javascript:void(0);" data-tab="4").products-block__categories-item Хендмейд та хоббі
-                  .products-block__categories-wrap
-                      a(href="javascript:void(0);" data-tab="5").products-block__categories-item Продукти і напої
-              .products-block__list
-                  .products-block-slider
-                      .swiper-wrapper
-                          .swiper-slide
-                              .product-card
-                                  a(href="#").product-card__img
-                                      .product-card__label -20%
-                                      img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
-                                  .product-card__content
-                                      a(href="javascript:void(0);").product-card__favorite-btn
-                                          include ../img/icons/heart.svg
-                                      .product-card__rating
-                                          .rating
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                      a(href="#").product-card__title Orci varius natoque penatibus et
-                                      .product-card__price
-                                          .product-card__price-wrap
-                                              .product-card__current-price 390грн
-                                              s.product-card__old-price 490грн
-                                          .product-card__price-label
-                                              .product-card__price-label-icon
-                                                  include ../img/icons/pluses.svg
-                                              .product-card__price-label-text Діють бонуси
-                                      button.product-card__buy-btn.btn.js-buy-btn Замовити
-                          .swiper-slide
-                              .product-card
-                                  a(href="#").product-card__img
-                                      .product-card__label.product-card__label--alt -20%
-                                      img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product2.jpg" alt="product 2").lazyload
-                                  .product-card__content
-                                      a(href="javascript:void(0);").product-card__favorite-btn
-                                          include ../img/icons/heart.svg
-                                      .product-card__rating
-                                          .rating
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                      a(href="#").product-card__title Orci varius natoque penatibus et
-                                      .product-card__price
-                                          .product-card__price-wrap
-                                              .product-card__current-price 490грн
-                                          .product-card__price-label
-                                              .product-card__price-label-icon
-                                                  include ../img/icons/pluses.svg
-                                              .product-card__price-label-text Діють бонуси
-                                      button.product-card__buy-btn.btn.js-buy-btn Замовити
-                          .swiper-slide
-                              .product-card
-                                  a(href="#").product-card__img
-                                      img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product3.jpg" alt="product 3").lazyload
-                                  .product-card__content
-                                      a(href="javascript:void(0);").product-card__favorite-btn
-                                          include ../img/icons/heart.svg
-                                      .product-card__rating
-                                          .rating
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                      a(href="#").product-card__title Orci varius natoque penatibus et
-                                      .product-card__price
-                                          .product-card__price-wrap
-                                              .product-card__current-price 490грн
-                                          .product-card__price-label
-                                              .product-card__price-label-icon
-                                                  include ../img/icons/pluses.svg
-                                              .product-card__price-label-text Діють бонуси
-                                      button.product-card__buy-btn.btn.js-buy-btn Замовити
-                          .swiper-slide
-                              .product-card
-                                  a(href="#").product-card__img
-                                      img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
-                                  .product-card__content
-                                      a(href="javascript:void(0);").product-card__favorite-btn
-                                          include ../img/icons/heart.svg
-                                      .product-card__rating
-                                          .rating
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                              span.rating__star
-                                                  include ../img/icons/rating_star.svg
-                                      a(href="#").product-card__title Orci varius natoque penatibus et
-                                      .product-card__price
-                                          .product-card__price-wrap
-                                              .product-card__current-price 490грн
-                                          .product-card__price-label
-                                              .product-card__price-label-icon
-                                                  include ../img/icons/pluses.svg
-                                              .product-card__price-label-text Діють бонуси
-                                      button.product-card__buy-btn.btn.js-buy-btn Замовити
-                      .products-block-slider__pagination
-    .section-pick
-        .section-pick__wrap
-            .container
-                .pick-form
-                    h2.section-title.pick-form__title Підібрати подарунок
-                    .pick-form__wrap
-                        .pick-form__group
-                            .pick-form__label Категорія
-                            .pick-form__select
-                                select(data-placeholder="Оберіть тут").form-select
-                                    option(label="no var")
-                                    option(label="Варіант 1") Варіант 1
-                                    option(label="Варіант 2") Варіант 2
-                                    option(label="Варіант 3") Варіант 3
-                        .pick-form__group
-                            .pick-form__label Для кого
-                            .pick-form__select
-                                select(data-placeholder="Оберіть тут").form-select
-                                    option(label="no var")
-                                    option(label="Варіант 1") Варіант 1
-                                    option(label="Варіант 2") Варіант 2
-                                    option(label="Варіант 3") Варіант 3
-                        .pick-form__group
-                            .pick-form__label Подія
-                            .pick-form__select
-                                select(data-placeholder="Оберіть тут").form-select
-                                    option(label="no var")
-                                    option(label="Варіант 1") Варіант 1
-                                    option(label="Варіант 2") Варіант 2
-                                    option(label="Варіант 3") Варіант 3
-                        .pick-form__group
-                            .pick-form__label Сума
-                            .pick-form__price-range
-                                input(type="text" placeholder="Від").pick-form__price-range-input
-                                .pick-form__price-range-divide
-                                input(type="text" placeholder="До").pick-form__price-range-input
-                        .pick-form__group.jc-flex-end
-                            a(href="javascript:void(0);").btn.btn--secondary.pick-form__submit Замовити
-    .section-combo
-        .container
-            h2.section-title.section-combo__title Вдалі поєднання
-        .combo
-            .container
-                .combo__description Новорічний подарунок для мами від сина
-                .combo__inner
-                    .combo__list
-                        .combo-slider
-                            .swiper-wrapper
-                                .swiper-slide
-                                    .combo__item
-                                        .product-card
-                                            a(href="#").product-card__img
-                                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
-                                            .product-card__content
-                                                a(href="javascript:void(0);").product-card__favorite-btn
-                                                    include ../img/icons/heart.svg
-                                                .product-card__rating
-                                                    .rating
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                a(href="#").product-card__title Orci varius natoque penatibus et
-                                                .product-card__params
-                                                    .product-card__params-item
-                                                        .product-card__params-name Продавець
-                                                        .product-card__params-value Monteral
-                                                .product-card__price
-                                                    .product-card__price-wrap
-                                                        .product-card__current-price 490грн
-                                                    .product-card__price-label
-                                                        .product-card__price-label-icon
-                                                            include ../img/icons/pluses.svg
-                                                        .product-card__price-label-text Діють бонуси
-                                                button.product-card__buy-btn.btn.js-buy-btn.btn--light Замовити
-                                .swiper-slide
-                                    .combo__item
-                                        .product-card
-                                            a(href="#").product-card__img
-                                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product2.jpg" alt="product 2").lazyload
-                                            .product-card__content
-                                                a(href="javascript:void(0);").product-card__favorite-btn
-                                                    include ../img/icons/heart.svg
-                                                .product-card__rating
-                                                    .rating
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                a(href="#").product-card__title Orci varius natoque penatibus et
-                                                .product-card__params
-                                                    .product-card__params-item
-                                                        .product-card__params-name Продавець
-                                                        .product-card__params-value Monteral
-                                                .product-card__price
-                                                    .product-card__price-wrap
-                                                        .product-card__current-price 490грн
-                                                    .product-card__price-label
-                                                        .product-card__price-label-icon
-                                                            include ../img/icons/pluses.svg
-                                                        .product-card__price-label-text Діють бонуси
-                                                button.product-card__buy-btn.btn.js-buy-btn.btn--light Замовити
-
-                                .swiper-slide
-                                    .combo__item
-                                        .product-card
-                                            a(href="#").product-card__img
-                                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product3.jpg" alt="product 3").lazyload
-                                            .product-card__content
-                                                a(href="javascript:void(0);").product-card__favorite-btn
-                                                    include ../img/icons/heart.svg
-                                                .product-card__rating
-                                                    .rating
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                a(href="#").product-card__title Orci varius natoque penatibus et
-                                                .product-card__params
-                                                    .product-card__params-item
-                                                        .product-card__params-name Продавець
-                                                        .product-card__params-value Monteral
-                                                .product-card__price
-                                                    .product-card__price-wrap
-                                                        .product-card__current-price 490грн
-                                                    .product-card__price-label
-                                                        .product-card__price-label-icon
-                                                            include ../img/icons/pluses.svg
-                                                        .product-card__price-label-text Діють бонуси
-                                                button.product-card__buy-btn.btn.js-buy-btn.btn--light Замовити
-                                .swiper-slide
-                                    .combo__item
-                                        .product-card
-                                            a(href="#").product-card__img
-                                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product3.jpg" alt="product 3").lazyload
-                                            .product-card__content
-                                                a(href="javascript:void(0);").product-card__favorite-btn
-                                                    include ../img/icons/heart.svg
-                                                .product-card__rating
-                                                    .rating
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                        span.rating__star
-                                                            include ../img/icons/rating_star.svg
-                                                a(href="#").product-card__title Orci varius natoque penatibus et
-                                                .product-card__params
-                                                    .product-card__params-item
-                                                        .product-card__params-name Продавець
-                                                        .product-card__params-value Monteral
-                                                .product-card__price
-                                                    .product-card__price-wrap
-                                                        .product-card__current-price 490грн
-                                                    .product-card__price-label
-                                                        .product-card__price-label-icon
-                                                            include ../img/icons/pluses.svg
-                                                        .product-card__price-label-text Діють бонуси
-                                                button.product-card__buy-btn.btn.js-buy-btn.btn--light Замовити
-                    .combo__symbol =
-                    .combo__result
-                        .combo__result-wrap
-                            .combo__currency грн
-                            .combo__price 3 045
-                        a(href="javascript:void(0);").btn.btn--secondary-alt.combo__link Замовити комплект
-    .section-text
-        .container
-            .text-block
-                h2.section-title.text-block__title CEO text
-                .text-block__content.js-with-spoiler
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum velit et lacus dapibus dignissim. Suspendisse tincidunt est ornare urna aliquet, eget congue elit imperdiet. Aliquam sollicitudin pellentesque nunc, pellentesque facilisis leo feugiat in. Proin gravida commodo mollis. Duis id rhoncus nunc. Pellentesque interdum eget velit eget semper. Donec dapibus aliquet turpis, egestas molestie ligula dignissim vel. Aliquam facilisis risus sit amet mauris consequat placerat.
-                    p Aenean commodo sed erat ut aliquet. Nulla facilisi. Etiam eu elit non nisi iaculis pellentesque et et mi. Suspendisse ultrices suscipit efficitur. Donec sed felis vitae eros imperdiet pretium ut ac nulla. Nulla porta congue nulla sit amet finibus. Etiam mollis, leo at congue luctus, risus erat cursus felis, consequat aliquam magna dolor at sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet arcu non neque interdum, eu viverra tortor lobortis. Sed augue ex, tempor quis risus a, finibus posuere turpis. In accumsan libero in elit sagittis pharetra. Ut imperdiet massa ac venenatis pretium. Donec pharetra id arcu ut pretium.
-                    a(href="javascript:void(0);" data-text="Приховати").show-more-btn Показати більше
-                    p Aenean commodo sed erat ut aliquet. Nulla facilisi. Etiam eu elit non nisi iaculis pellentesque et et mi. Suspendisse ultrices suscipit efficitur. Donec sed felis vitae eros imperdiet pretium ut ac nulla. Nulla porta congue nulla sit amet finibus. Etiam mollis, leo at congue luctus, risus erat cursus felis, consequat aliquam magna dolor at sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet arcu non neque interdum, eu viverra tortor lobortis. Sed augue ex, tempor quis risus a, finibus posuere turpis. In accumsan libero in elit sagittis pharetra. Ut imperdiet massa ac venenatis pretium. Donec pharetra id arcu ut pretium.
-
-    include ./components/popups/_popup_cookies
-
-        
-    
+//extends ./templates/_layout
+//
+//block vars
+//  - var pageTitle = "Homepage";
+//  - var pageClass = "homepage";
+//  - var pageActive = "homepage";
+//
+//block content
+//  div.main-wrap
+//    .section-main.lazyload
+//        .container.container--fluid
+//            .section-main__wrap
+//                .home-menu
+//                    .home-menu__title Категорії
+//                    ul.home-menu__list
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/flowers.svg
+//                                .home-menu__link-text Квіти та букети
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/cake.svg
+//                                .home-menu__link-text Кондитерські та пекарні
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/coffee.svg
+//                                .home-menu__link-text Чай та кава
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/heart_cat.svg
+//                                .home-menu__link-text Подарункові сертифікати
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/jewelry.svg
+//                                .home-menu__link-text Прикраси та аксесуари
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/products.svg
+//                                .home-menu__link-text Продукти та напої
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/cosmetics.svg
+//                                .home-menu__link-text Косметика та парфюмерія
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/house.svg
+//                                .home-menu__link-text Для дому
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/pictures.svg
+//                                .home-menu__link-text Картини та фото
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/handmade.svg
+//                                .home-menu__link-text Хендмейд та хоббі
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/health.svg
+//                                .home-menu__link-text Здоровя
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/teddybear.svg
+//                                .home-menu__link-text Мякі іграшки
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/stars.svg
+//                                .home-menu__link-text Товари для свята
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/books.svg
+//                                .home-menu__link-text Книги
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/tableware.svg
+//                                .home-menu__link-text Посуд
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/stationery.svg
+//                                .home-menu__link-text Канелярські товари
+//                        li.home-menu__item
+//                            a(href="#").home-menu__link
+//                                .home-menu__link-icon
+//                                    include ../img/category_icons/other.svg
+//                                .home-menu__link-text Інше
+//                .home-slider-wrap
+//                    .home-slider
+//                        .home-slider__nav
+//                            .home-slider__nav-btn.home-slider__nav-prev
+//                                include ../img/icons/slider_arrow.svg
+//                            .home-slider__nav-counter
+//                                .home-slider__nav-counter-inner
+//                                    span(data-current-slide) 1
+//                                    span /
+//                                    span(data-slides-count) 4
+//                                .home-slider__nav-counter-step.step-1
+//                            .home-slider__nav-btn.home-slider__nav-next
+//                                include ../img/icons/slider_arrow.svg
+//                        .home-slider__pagination
+//                        .swiper-wrapper
+//                            .swiper-slide
+//                                .home-slider__slide
+//                                    .home-slider__slide-img
+//                                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/slide1.png" alt="slide1").lazyload
+//                                    .home-slider__slide-title Подарунки (маркетплейс)
+//                                    .home-slider__slide-text Кур'єрська доставка або самовивіз
+//                                    a(href="#").btn.home-slider__slide-btn Перейти в каталог
+//                            .swiper-slide
+//                                .home-slider__slide
+//                                    .home-slider__slide-img
+//                                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/slide2.png" alt="slide2").lazyload
+//                                    .home-slider__slide-title Подарунки (маркетплейс)
+//                                    .home-slider__slide-text Кур'єрська доставка або самовивіз
+//                                    a(href="#").btn.home-slider__slide-btn Перейти в каталог
+//                            .swiper-slide
+//                                .home-slider__slide
+//                                    .home-slider__slide-img
+//                                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/slide3.png" alt="slide3").lazyload
+//                                    .home-slider__slide-title Подарунки (маркетплейс)
+//                                    .home-slider__slide-text Кур'єрська доставка або самовивіз
+//                                    a(href="#").btn.home-slider__slide-btn Перейти в каталог
+//                            .swiper-slide
+//                                .home-slider__slide
+//                                    .home-slider__slide-img
+//                                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/slide1.png" alt="slide4").lazyload
+//                                    .home-slider__slide-title Подарунки (маркетплейс)
+//                                    .home-slider__slide-text Кур'єрська доставка або самовивіз
+//                                    a(href="#").btn.home-slider__slide-btn Перейти в каталог
+//    .home-background-wrap
+//        .section-popular
+//            .container
+//                .products-block(data-tabs="")
+//                    h2.section-title.products-block__title Популярні
+//                    .products-block__categories
+//                        .products-block__categories-wrap
+//                            a(href="javascript:void(0);" data-tab="1").products-block__categories-item.active Картини та фото
+//                        .products-block__categories-wrap
+//                            a(href="javascript:void(0);" data-tab="2").products-block__categories-item Для дому
+//                        .products-block__categories-wrap
+//                            a(href="javascript:void(0);" data-tab="3").products-block__categories-item Здоров’я
+//                        .products-block__categories-wrap
+//                            a(href="javascript:void(0);" data-tab="4").products-block__categories-item М’які іграшки
+//                        .products-block__categories-wrap
+//                            a(href="javascript:void(0);" data-tab="5").products-block__categories-item Книги
+//                    .products-block__list
+//                        .products-block-slider
+//                            .swiper-wrapper
+//                                .swiper-slide
+//                                    .product-card
+//                                        a(href="#").product-card__img
+//                                            .product-card__label -20%
+//                                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
+//                                        .product-card__content
+//                                            a(href="javascript:void(0);").product-card__favorite-btn
+//                                                include ../img/icons/heart.svg
+//                                            .product-card__rating
+//                                                .rating
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                            a(href="#").product-card__title Orci varius natoque penatibus et
+//                                            .product-card__price
+//                                                .product-card__price-wrap
+//                                                    .product-card__current-price 390грн
+//                                                    s.product-card__old-price 490грн
+//                                                .product-card__price-label
+//                                                    .product-card__price-label-icon
+//                                                        include ../img/icons/pluses.svg
+//                                                    .product-card__price-label-text Діють бонуси
+//                                            button.product-card__buy-btn.btn.js-buy-btn Замовити
+//                                .swiper-slide
+//                                    .product-card
+//                                        a(href="#").product-card__img
+//                                            .product-card__label.product-card__label--alt -20%
+//                                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product2.jpg" alt="product 2").lazyload
+//                                        .product-card__content
+//                                            a(href="javascript:void(0);").product-card__favorite-btn
+//                                                include ../img/icons/heart.svg
+//                                            .product-card__rating
+//                                                .rating
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                            a(href="#").product-card__title Orci varius natoque penatibus et
+//                                            .product-card__price
+//                                                .product-card__price-wrap
+//                                                    .product-card__current-price 490грн
+//                                                .product-card__price-label
+//                                                    .product-card__price-label-icon
+//                                                        include ../img/icons/pluses.svg
+//                                                    .product-card__price-label-text Діють бонуси
+//                                            button.product-card__buy-btn.btn.js-buy-btn Замовити
+//                                .swiper-slide
+//                                    .product-card
+//                                        a(href="#").product-card__img
+//                                            .product-card__label-svg
+//                                                include ../img/icons/discount.svg
+//                                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product3.jpg" alt="product 3").lazyload
+//                                        .product-card__content
+//                                            a(href="javascript:void(0);").product-card__favorite-btn
+//                                                include ../img/icons/heart.svg
+//                                            .product-card__rating
+//                                                .rating
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                            a(href="#").product-card__title Orci varius natoque penatibus et
+//                                            .product-card__price
+//                                                .product-card__price-wrap
+//                                                    .product-card__current-price 490грн
+//                                                .product-card__price-label
+//                                                    .product-card__price-label-icon
+//                                                        include ../img/icons/pluses.svg
+//                                                    .product-card__price-label-text Діють бонуси
+//                                            button.product-card__buy-btn.btn.js-buy-btn Замовити
+//                                .swiper-slide
+//                                    .product-card
+//                                        a(href="#").product-card__img
+//                                            .product-card__label-svg
+//                                                include ../img/icons/discount.svg
+//                                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
+//                                        .product-card__content
+//                                            a(href="javascript:void(0);").product-card__favorite-btn
+//                                                include ../img/icons/heart.svg
+//                                            .product-card__rating
+//                                                .rating
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                                    span.rating__star
+//                                                        include ../img/icons/rating_star.svg
+//                                            a(href="#").product-card__title Orci varius natoque penatibus et
+//                                            .product-card__price
+//                                                .product-card__price-wrap
+//                                                    .product-card__current-price 490грн
+//                                                .product-card__price-label
+//                                                    .product-card__price-label-icon
+//                                                        include ../img/icons/pluses.svg
+//                                                    .product-card__price-label-text Діють бонуси
+//                                            button.product-card__buy-btn.btn.js-buy-btn Замовити
+//                            .products-block-slider__pagination
+//        .section-steps
+//            .section-steps__wrap
+//                .container
+//                    .steps-block
+//                        .steps-block__list
+//                            .steps-block__item
+//                                .steps-block__item-icon
+//                                    include ../img/icons/gift.svg
+//                                .steps-block__item-text Обери подарунки
+//                            .steps-block__divide
+//                            .steps-block__item
+//                                .steps-block__item-icon
+//                                    include ../img/icons/truck.svg
+//                                .steps-block__item-text Замов доставку або </br>забери сам
+//                            .steps-block__divide
+//                            .steps-block__item
+//                                .steps-block__item-icon
+//                                    include ../img/icons/cc.svg
+//                                .steps-block__item-text Оплати онлайн </br>або на місці
+//                            .steps-block__divide
+//                            .steps-block__item
+//                                .steps-block__item-icon
+//                                    include ../img/icons/star.svg
+//                                .steps-block__item-text Отримай бонуси
+//                            .steps-block__divide
+//                            .steps-block__item
+//                                .steps-block__item-icon
+//                                    include ../img/icons/speech.svg
+//                                .steps-block__item-text Залиш відгук
+//    .section-categories
+//        .container
+//            .home-categories
+//                h2.section-title.home-categories__title Категорії
+//                .home-categories__list
+//                    a(href="#").home-categories__item.home-categories__item--big.home-categories__item--pattern1
+//                        .home-categories__item-content
+//                            .home-categories__item-title Квіти та букети
+//                        .home-categories__item-img
+//                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat1.png" alt="category 1").lazyload
+//                    a(href="#").home-categories__item.home-categories__item--high.home-categories__item--bright.home-categories__item--pattern2
+//                        .home-categories__item-content
+//                            .home-categories__item-title Кондитерка</br>та пекарні
+//                        .home-categories__item-img
+//                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat2.png" alt="category 2").lazyload
+//                    a(href="#").home-categories__item
+//                        .home-categories__item-content
+//                            .home-categories__item-title Сертифікат
+//                        .home-categories__item-img
+//                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat3.png" alt="category 3").lazyload
+//                    a(href="#").home-categories__item.home-categories__item--bright2
+//                        .home-categories__item-content
+//                            .home-categories__item-title Товари для свята
+//                        .home-categories__item-img
+//                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat4.png" alt="category 4").lazyload
+//                    a(href="#").home-categories__item.home-categories__item--big.home-categories__item--bright.home-categories__item--pattern3
+//                        .home-categories__item-content
+//                            .home-categories__item-title Категорії
+//                        .home-categories__item-img
+//                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/category/cat5.png" alt="category 5").lazyload
+//    .section-might-like
+//      .container
+//          .products-block(data-tabs="")
+//              h2.section-title.products-block__title Вам може сподобатись
+//              .products-block__categories
+//                  .products-block__categories-wrap
+//                      a(href="javascript:void(0);" data-tab="1").products-block__categories-item.active Чай та кава
+//                  .products-block__categories-wrap
+//                      a(href="javascript:void(0);" data-tab="2").products-block__categories-item Картини та фото
+//                  .products-block__categories-wrap
+//                      a(href="javascript:void(0);" data-tab="3").products-block__categories-item Канцелярія
+//                  .products-block__categories-wrap
+//                      a(href="javascript:void(0);" data-tab="4").products-block__categories-item Хендмейд та хоббі
+//                  .products-block__categories-wrap
+//                      a(href="javascript:void(0);" data-tab="5").products-block__categories-item Продукти і напої
+//              .products-block__list
+//                  .products-block-slider
+//                      .swiper-wrapper
+//                          .swiper-slide
+//                              .product-card
+//                                  a(href="#").product-card__img
+//                                      .product-card__label -20%
+//                                      img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
+//                                  .product-card__content
+//                                      a(href="javascript:void(0);").product-card__favorite-btn
+//                                          include ../img/icons/heart.svg
+//                                      .product-card__rating
+//                                          .rating
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                      a(href="#").product-card__title Orci varius natoque penatibus et
+//                                      .product-card__price
+//                                          .product-card__price-wrap
+//                                              .product-card__current-price 390грн
+//                                              s.product-card__old-price 490грн
+//                                          .product-card__price-label
+//                                              .product-card__price-label-icon
+//                                                  include ../img/icons/pluses.svg
+//                                              .product-card__price-label-text Діють бонуси
+//                                      button.product-card__buy-btn.btn.js-buy-btn Замовити
+//                          .swiper-slide
+//                              .product-card
+//                                  a(href="#").product-card__img
+//                                      .product-card__label.product-card__label--alt -20%
+//                                      img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product2.jpg" alt="product 2").lazyload
+//                                  .product-card__content
+//                                      a(href="javascript:void(0);").product-card__favorite-btn
+//                                          include ../img/icons/heart.svg
+//                                      .product-card__rating
+//                                          .rating
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                      a(href="#").product-card__title Orci varius natoque penatibus et
+//                                      .product-card__price
+//                                          .product-card__price-wrap
+//                                              .product-card__current-price 490грн
+//                                          .product-card__price-label
+//                                              .product-card__price-label-icon
+//                                                  include ../img/icons/pluses.svg
+//                                              .product-card__price-label-text Діють бонуси
+//                                      button.product-card__buy-btn.btn.js-buy-btn Замовити
+//                          .swiper-slide
+//                              .product-card
+//                                  a(href="#").product-card__img
+//                                      img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product3.jpg" alt="product 3").lazyload
+//                                  .product-card__content
+//                                      a(href="javascript:void(0);").product-card__favorite-btn
+//                                          include ../img/icons/heart.svg
+//                                      .product-card__rating
+//                                          .rating
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                      a(href="#").product-card__title Orci varius natoque penatibus et
+//                                      .product-card__price
+//                                          .product-card__price-wrap
+//                                              .product-card__current-price 490грн
+//                                          .product-card__price-label
+//                                              .product-card__price-label-icon
+//                                                  include ../img/icons/pluses.svg
+//                                              .product-card__price-label-text Діють бонуси
+//                                      button.product-card__buy-btn.btn.js-buy-btn Замовити
+//                          .swiper-slide
+//                              .product-card
+//                                  a(href="#").product-card__img
+//                                      img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
+//                                  .product-card__content
+//                                      a(href="javascript:void(0);").product-card__favorite-btn
+//                                          include ../img/icons/heart.svg
+//                                      .product-card__rating
+//                                          .rating
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                              span.rating__star
+//                                                  include ../img/icons/rating_star.svg
+//                                      a(href="#").product-card__title Orci varius natoque penatibus et
+//                                      .product-card__price
+//                                          .product-card__price-wrap
+//                                              .product-card__current-price 490грн
+//                                          .product-card__price-label
+//                                              .product-card__price-label-icon
+//                                                  include ../img/icons/pluses.svg
+//                                              .product-card__price-label-text Діють бонуси
+//                                      button.product-card__buy-btn.btn.js-buy-btn Замовити
+//                      .products-block-slider__pagination
+//    .section-pick
+//        .section-pick__wrap
+//            .container
+//                .pick-form
+//                    h2.section-title.pick-form__title Підібрати подарунок
+//                    .pick-form__wrap
+//                        .pick-form__group
+//                            .pick-form__label Категорія
+//                            .pick-form__select
+//                                select(data-placeholder="Оберіть тут").form-select
+//                                    option(label="no var")
+//                                    option(label="Варіант 1") Варіант 1
+//                                    option(label="Варіант 2") Варіант 2
+//                                    option(label="Варіант 3") Варіант 3
+//                        .pick-form__group
+//                            .pick-form__label Для кого
+//                            .pick-form__select
+//                                select(data-placeholder="Оберіть тут").form-select
+//                                    option(label="no var")
+//                                    option(label="Варіант 1") Варіант 1
+//                                    option(label="Варіант 2") Варіант 2
+//                                    option(label="Варіант 3") Варіант 3
+//                        .pick-form__group
+//                            .pick-form__label Подія
+//                            .pick-form__select
+//                                select(data-placeholder="Оберіть тут").form-select
+//                                    option(label="no var")
+//                                    option(label="Варіант 1") Варіант 1
+//                                    option(label="Варіант 2") Варіант 2
+//                                    option(label="Варіант 3") Варіант 3
+//                        .pick-form__group
+//                            .pick-form__label Сума
+//                            .pick-form__price-range
+//                                input(type="text" placeholder="Від").pick-form__price-range-input
+//                                .pick-form__price-range-divide
+//                                input(type="text" placeholder="До").pick-form__price-range-input
+//                        .pick-form__group.jc-flex-end
+//                            a(href="javascript:void(0);").btn.btn--secondary.pick-form__submit Замовити
+//    .section-combo
+//        .container
+//            h2.section-title.section-combo__title Вдалі поєднання
+//        .combo
+//            .container
+//                .combo__description Новорічний подарунок для мами від сина
+//                .combo__inner
+//                    .combo__list
+//                        .combo-slider
+//                            .swiper-wrapper
+//                                .swiper-slide
+//                                    .combo__item
+//                                        .product-card
+//                                            a(href="#").product-card__img
+//                                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product1.jpg" alt="product 1").lazyload
+//                                            .product-card__content
+//                                                a(href="javascript:void(0);").product-card__favorite-btn
+//                                                    include ../img/icons/heart.svg
+//                                                .product-card__rating
+//                                                    .rating
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                a(href="#").product-card__title Orci varius natoque penatibus et
+//                                                .product-card__params
+//                                                    .product-card__params-item
+//                                                        .product-card__params-name Продавець
+//                                                        .product-card__params-value Monteral
+//                                                .product-card__price
+//                                                    .product-card__price-wrap
+//                                                        .product-card__current-price 490грн
+//                                                    .product-card__price-label
+//                                                        .product-card__price-label-icon
+//                                                            include ../img/icons/pluses.svg
+//                                                        .product-card__price-label-text Діють бонуси
+//                                                button.product-card__buy-btn.btn.js-buy-btn.btn--light Замовити
+//                                .swiper-slide
+//                                    .combo__item
+//                                        .product-card
+//                                            a(href="#").product-card__img
+//                                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product2.jpg" alt="product 2").lazyload
+//                                            .product-card__content
+//                                                a(href="javascript:void(0);").product-card__favorite-btn
+//                                                    include ../img/icons/heart.svg
+//                                                .product-card__rating
+//                                                    .rating
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                a(href="#").product-card__title Orci varius natoque penatibus et
+//                                                .product-card__params
+//                                                    .product-card__params-item
+//                                                        .product-card__params-name Продавець
+//                                                        .product-card__params-value Monteral
+//                                                .product-card__price
+//                                                    .product-card__price-wrap
+//                                                        .product-card__current-price 490грн
+//                                                    .product-card__price-label
+//                                                        .product-card__price-label-icon
+//                                                            include ../img/icons/pluses.svg
+//                                                        .product-card__price-label-text Діють бонуси
+//                                                button.product-card__buy-btn.btn.js-buy-btn.btn--light Замовити
+//
+//                                .swiper-slide
+//                                    .combo__item
+//                                        .product-card
+//                                            a(href="#").product-card__img
+//                                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product3.jpg" alt="product 3").lazyload
+//                                            .product-card__content
+//                                                a(href="javascript:void(0);").product-card__favorite-btn
+//                                                    include ../img/icons/heart.svg
+//                                                .product-card__rating
+//                                                    .rating
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                a(href="#").product-card__title Orci varius natoque penatibus et
+//                                                .product-card__params
+//                                                    .product-card__params-item
+//                                                        .product-card__params-name Продавець
+//                                                        .product-card__params-value Monteral
+//                                                .product-card__price
+//                                                    .product-card__price-wrap
+//                                                        .product-card__current-price 490грн
+//                                                    .product-card__price-label
+//                                                        .product-card__price-label-icon
+//                                                            include ../img/icons/pluses.svg
+//                                                        .product-card__price-label-text Діють бонуси
+//                                                button.product-card__buy-btn.btn.js-buy-btn.btn--light Замовити
+//                                .swiper-slide
+//                                    .combo__item
+//                                        .product-card
+//                                            a(href="#").product-card__img
+//                                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/product3.jpg" alt="product 3").lazyload
+//                                            .product-card__content
+//                                                a(href="javascript:void(0);").product-card__favorite-btn
+//                                                    include ../img/icons/heart.svg
+//                                                .product-card__rating
+//                                                    .rating
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                        span.rating__star
+//                                                            include ../img/icons/rating_star.svg
+//                                                a(href="#").product-card__title Orci varius natoque penatibus et
+//                                                .product-card__params
+//                                                    .product-card__params-item
+//                                                        .product-card__params-name Продавець
+//                                                        .product-card__params-value Monteral
+//                                                .product-card__price
+//                                                    .product-card__price-wrap
+//                                                        .product-card__current-price 490грн
+//                                                    .product-card__price-label
+//                                                        .product-card__price-label-icon
+//                                                            include ../img/icons/pluses.svg
+//                                                        .product-card__price-label-text Діють бонуси
+//                                                button.product-card__buy-btn.btn.js-buy-btn.btn--light Замовити
+//                    .combo__symbol =
+//                    .combo__result
+//                        .combo__result-wrap
+//                            .combo__currency грн
+//                            .combo__price 3 045
+//                        a(href="javascript:void(0);").btn.btn--secondary-alt.combo__link Замовити комплект
+//    .section-text
+//        .container
+//            .text-block
+//                h2.section-title.text-block__title CEO text
+//                .text-block__content.js-with-spoiler
+//                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum velit et lacus dapibus dignissim. Suspendisse tincidunt est ornare urna aliquet, eget congue elit imperdiet. Aliquam sollicitudin pellentesque nunc, pellentesque facilisis leo feugiat in. Proin gravida commodo mollis. Duis id rhoncus nunc. Pellentesque interdum eget velit eget semper. Donec dapibus aliquet turpis, egestas molestie ligula dignissim vel. Aliquam facilisis risus sit amet mauris consequat placerat.
+//                    p Aenean commodo sed erat ut aliquet. Nulla facilisi. Etiam eu elit non nisi iaculis pellentesque et et mi. Suspendisse ultrices suscipit efficitur. Donec sed felis vitae eros imperdiet pretium ut ac nulla. Nulla porta congue nulla sit amet finibus. Etiam mollis, leo at congue luctus, risus erat cursus felis, consequat aliquam magna dolor at sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet arcu non neque interdum, eu viverra tortor lobortis. Sed augue ex, tempor quis risus a, finibus posuere turpis. In accumsan libero in elit sagittis pharetra. Ut imperdiet massa ac venenatis pretium. Donec pharetra id arcu ut pretium.
+//                    a(href="javascript:void(0);" data-text="Приховати").show-more-btn Показати більше
+//                    p Aenean commodo sed erat ut aliquet. Nulla facilisi. Etiam eu elit non nisi iaculis pellentesque et et mi. Suspendisse ultrices suscipit efficitur. Donec sed felis vitae eros imperdiet pretium ut ac nulla. Nulla porta congue nulla sit amet finibus. Etiam mollis, leo at congue luctus, risus erat cursus felis, consequat aliquam magna dolor at sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet arcu non neque interdum, eu viverra tortor lobortis. Sed augue ex, tempor quis risus a, finibus posuere turpis. In accumsan libero in elit sagittis pharetra. Ut imperdiet massa ac venenatis pretium. Donec pharetra id arcu ut pretium.
+//
+//
+//
+//
