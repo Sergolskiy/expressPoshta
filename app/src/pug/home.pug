@@ -10,19 +10,19 @@ block content
     .section-calculator.lazyload
       .container
         .site-title
-          .site-title-txt
+          h1.site-title-txt.main-title
             span Міжнародна
             | експрес доставка посилок та документів
           .calculator-tabs
             .calculator-tabs__item
               include ../img/home/calculator.svg
-              | Розрахувати вартість доставки
+              | Розрахувати вартість <br> доставки
             .calculator-tabs__item
               include ../img/home/clock.svg
               | Терміни доставки
             .calculator-tabs__item
               include ../img/home/lamp.svg
-              | Як видправити?
+              | Як <br> видправити?
 
         .calculator-block
           .calculator-block__inner
@@ -30,17 +30,21 @@ block content
               .calculator-block__item
                 .calculator-block__name Відправити звідки...
                 .calculator-block__select
-                  input(type='text' value='Велікобританія')
-                  .calculator-block__select--custom Поштовий індекс (рекомендуємо)
-                  .calculator-block__select--found
+                  .calculator-block__select-cuctom
+                    label(for='sender').calculator-block__selected Велікобританія
+                    input(type='text' id='sender' value='' placeholder='Поштовий індекс (рекомендуємо)')
+                    .calculator-block__select--found
               .calculator-block__item
                 .calculator-block__name Доставити куди...
                 .calculator-block__select
-                  input(type='text' value='Оберіть')
-                  .calculator-block__select--custom Поштовий індекс (рекомендуємо)
-                  .calculator-block__select--found
+                  .calculator-block__select-cuctom
+                    label(for='delivery').calculator-block__selected Оберіть
+                    input(type='text' id='delivery' value='' placeholder='Поштовий індекс (рекомендуємо)')
+                    .calculator-block__select--found
               .calculator-block__item
                 .calculator-block__name Що ви відправляєте?
+                  a(href='#').calculator-block__name--quest Потрібна допомога?
+                    include ../img/home/help.svg
                 .calculator-block__select-wrap
                   .calculator-block__select-item.calculator-block__select-item--col-3
                     .calculator-block__select
@@ -48,8 +52,8 @@ block content
                         option(value='1') 1
                   .calculator-block__select-item.calculator-block__select-item--col-9
                     .calculator-block__select
-                    select
-                      option(value='Посилка') Посилка
+                      select
+                        option(value='Посилка') Посилка
               .calculator-block__item
                 .calculator-block__select-wrap.calculator-block__select-wrap--column
                   .calculator-block__select-item.calculator-block__select-item--col-3
@@ -80,7 +84,7 @@ block content
                 .calculator-block__radio
                   .calculator-block__radio-txt Вимірювання:
                   .calculator-block__radio-item
-                    input(type="radio" id='kg' name='weight_type' value='kg/cm')
+                    input(type="radio" id='kg' name='weight_type' value='kg/cm' checked='true')
                     label(for='kg').calculator-block__radio-label kg/cm
                   .calculator-block__radio-item
                     input(type="radio" id='lb' name='weight_type' value='lb/inches')
@@ -102,10 +106,10 @@ block content
           .delivery__inner
             .site-title.site-title--small
               .site-title-txt
-                span Терміни
+                span Терміни <br>
                 | нашої доставки
               .site-title-caption Ми працюємо з провідними перевізниками та забезпечуємо термінову доставку важливих посилок у будь-яку країну світу.
-              .site-title-btn.site-btn Обрати іншу країну
+              a(href='#').site-title-btn.site-btn Обрати іншу країну
             .delivery__items
               .delivery__item
                 .delivery__item-inner
@@ -202,7 +206,7 @@ block content
                 span Чому
                 | express poshta?
               .site-title-caption Ми працюємо з провідними перевізниками та забезпечуємо термінову доставку важливих посилок у будь-яку країну світу. Скориставшись нашими послугами Ви гарантовано отримуєте найвищу якість за розумною ціною.
-              .site-title-btn
+              a(href='#').site-title-btn
                 span Що можна відправити?
                 .site-title-btn.site-btn Обрати іншу країну
 
