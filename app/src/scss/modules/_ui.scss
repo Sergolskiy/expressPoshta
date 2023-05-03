@@ -62,15 +62,6 @@ input[type=number]::-webkit-outer-spin-button {
   //}
 }
 
-.page__content {
-  padding-top: 58px;
-  @media (max-width: 991px) {
-    padding-top: 48px;
-  }
-  //@media (max-width: 680px) {
-  //  padding-top: 78px;
-  //}
-}
 
 .container {
   max-width: 1750px;

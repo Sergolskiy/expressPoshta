@@ -14,13 +14,13 @@ block content
             span Міжнародна
             | експрес доставка посилок та документів
           .calculator-tabs
-            .calculator-tabs__item
+            a(href='#').calculator-tabs__item
               include ../img/home/calculator.svg
               | Розрахувати вартість <br> доставки
-            .calculator-tabs__item
+            a(href='#').calculator-tabs__item
               include ../img/home/clock.svg
               | Терміни доставки
-            .calculator-tabs__item
+            a(href='#').calculator-tabs__item
               include ../img/home/lamp.svg
               | Як <br> видправити?
 
@@ -113,6 +113,7 @@ block content
             .delivery__items
               .delivery__item
                 .delivery__item-inner
+                  include ../img/home/country/usa.svg
                   .delivery__item-top
                     include ../img/home/flag_usa.svg
                     | США
@@ -125,6 +126,7 @@ block content
                       .delivery__item-txt 6 - 10 днів
               .delivery__item
                 .delivery__item-inner
+                  include ../img/home/country/canada.svg
                   .delivery__item-top
                     include ../img/home/flag_kanada.svg
                     | Канада
@@ -134,6 +136,7 @@ block content
                       .delivery__item-txt 7 днів
               .delivery__item
                 .delivery__item-inner
+                  include ../img/home/country/australia.svg
                   .delivery__item-top
                     include ../img/home/flag_australia.svg
                     | Австралія
@@ -143,6 +146,7 @@ block content
                       .delivery__item-txt 4 - 5 днів
               .delivery__item
                 .delivery__item-inner
+                  include ../img/home/country/poland.svg
                   .delivery__item-top
                     include ../img/home/flag_poland.svg
                     | Польша
@@ -152,6 +156,7 @@ block content
                       .delivery__item-txt 4 - 8 днів
               .delivery__item
                 .delivery__item-inner
+                  include ../img/home/country/italy.svg
                   .delivery__item-top
                     include ../img/home/flag_italy.svg
                     | Італія
@@ -161,6 +166,7 @@ block content
                       .delivery__item-txt 3 - 6 днів
               .delivery__item
                 .delivery__item-inner
+                  include ../img/home/country/gb.svg
                   .delivery__item-top
                     include ../img/home/flag_gb.svg
                     | Великобретанія
@@ -170,6 +176,7 @@ block content
                       .delivery__item-txt 2 - 6 днів
               .delivery__item
                 .delivery__item-inner
+                  include ../img/home/country/germany.svg
                   .delivery__item-top
                     include ../img/home/flag_germany.svg
                     | Німетчина
@@ -179,6 +186,7 @@ block content
                       .delivery__item-txt 3 - 6 днів
               .delivery__item
                 .delivery__item-inner
+                  include ../img/home/country/spain.svg
                   .delivery__item-top
                     include ../img/home/flag_spain.svg
                     | Іспанія
@@ -188,6 +196,7 @@ block content
                       .delivery__item-txt 3 - 7 днів
               .delivery__item
                 .delivery__item-inner
+                  include ../img/home/country/greece.svg
                   .delivery__item-top
                     include ../img/home/flag_greece.svg
                     | Греція
@@ -201,22 +210,27 @@ block content
       .container
         .why-we
           .why-we__inner
-            .site-title.site-title
-              .site-title-txt
-                span Чому
-                | express poshta?
-              .site-title-caption Ми працюємо з провідними перевізниками та забезпечуємо термінову доставку важливих посилок у будь-яку країну світу. Скориставшись нашими послугами Ви гарантовано отримуєте найвищу якість за розумною ціною.
-              a(href='#').site-title-btn
-                span Що можна відправити?
-                .site-title-btn.site-btn Обрати іншу країну
+            .why-we__left
+              .site-title.site-title
+                .site-title-txt
+                  | Чому&nbsp;
+                  span express poshta?
+                .site-title-caption Ми працюємо з провідними перевізниками та забезпечуємо термінову доставку важливих посилок у будь-яку країну світу. Скориставшись нашими послугами Ви гарантовано отримуєте найвищу якість за розумною ціною.
+                .site-title-btn-wrap
+                  span Що можна відправити?
+                  a(href='#').site-title-btn.site-btn Обрати іншу країну
 
             .why-we__right
               .why-we__right-img
-                include ../img/home/earch.svg
+                include ../img/home/earch3.svg
                 span.why-we__right-txt.send Комерційні відправлення
+                  include ../img/home/why/1_.svg
                 span.why-we__right-txt.box Подарунки
+                  include ../img/home/why/2_.svg
                 span.why-we__right-txt.money Особисті речі
+                  include ../img/home/why/3_.svg
                 span.why-we__right-txt.docs Документи
+                  include ../img/home/why/4_.svg
 
 
 
