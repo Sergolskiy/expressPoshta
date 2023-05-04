@@ -150,7 +150,7 @@
   &__munu-wrap {
     width: 100%;
     max-width: 850px;
-    margin-right: 20px;
+    margin-right: 11px;
   }
 
   &__menu {
@@ -236,6 +236,10 @@
 
   &__languages-item {
     cursor: pointer;
+
+    svg {
+      pointer-events: none;
+    }
   }
 
   &__phone a {
@@ -243,7 +247,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
-    margin-right: 24px;
+    margin-right: 29px;
   }
 
   &__social {
