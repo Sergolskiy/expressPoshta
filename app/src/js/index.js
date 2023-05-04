@@ -705,9 +705,25 @@ function initLanguageMenu() {
     })
 }
 
+function initShowBlock() {
+    let btn = document.getElementById('detail-show')
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        let block = document.querySelector('.who-we__txt')
+        if(block.classList.contains('show')) {
+            btn.innerHTML = 'Детальніше'
+        } else {
+            btn.innerHTML = 'Скрити'
+        }
+        block.classList.toggle('show')
+
+    })
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     initLanguageMenu()
+    initShowBlock()
 
 
     // if (document.querySelector('.site-datepicker')) {
