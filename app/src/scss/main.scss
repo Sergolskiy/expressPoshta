@@ -436,7 +436,7 @@
 
   &__name--quest {
     display: inline-flex;
-    //margin-left: 45px;
+    margin-left: 45px;
     font-weight: 400;
     font-size: 17px;
     line-height: 23px;
@@ -549,7 +549,7 @@
     padding: 0 10px;
 
     &--col-3 {
-      width: 33%;
+      width: 33.33%;
     }
 
     &--col-6 {
@@ -557,7 +557,7 @@
     }
 
     &--col-9 {
-      width: 66%;
+      width: 66.66%;
     }
 
     .calculator-block__name {
@@ -566,7 +566,8 @@
     }
 
     .site-btn {
-      padding: 14px 40px;
+      padding: 14px 20px;
+      width: 100%;
     }
 
   }
@@ -714,7 +715,7 @@
     border-left: 2px solid #1E90FF;
     padding: 0 13px;
     margin-left: 20px;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 23px;
     color: #292B4F;
 
@@ -725,6 +726,7 @@
     span {
       font-weight: 700;
       padding-left: 5px;
+      font-size: 20px;
     }
   }
 

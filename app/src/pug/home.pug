@@ -45,11 +45,11 @@ block content
                   //  label(for='delivery').calculator-block__selected Оберіть
                   //  input(type='text' id='delivery' value='' placeholder='Поштовий індекс (рекомендуємо)')
                   //  .calculator-block__select--found
-              .calculator-block__item.calculator-block__item--col-2
-                .calculator-block__name Зіп код
-                .calculator-block__select
-                  .calculator-block__input
-                    input(type='text' placeholder='Наприклад: 10001')
+              //.calculator-block__item.calculator-block__item--col-2
+              //  .calculator-block__name Зіп код
+              //  .calculator-block__select
+              //    .calculator-block__input
+              //      input(type='text' placeholder='Наприклад: 10001')
               //.calculator-block__item
               //  .calculator-block__name Що ви відправляєте?
               //    a(href='#').calculator-block__name--quest Потрібна допомога?
@@ -63,7 +63,7 @@ block content
               //      .calculator-block__select
               //        select
               //          option(value='Посилка') Посилка
-              .calculator-block__item
+              .calculator-block__item.calculator-block__item--col-5
                 .calculator-block__select-wrap.calculator-block__select-wrap--column
                   .calculator-block__select-item.calculator-block__select-item--col-3
                     .calculator-block__name Вага
@@ -85,13 +85,22 @@ block content
                     .calculator-block__input
                       input(type='text')
                       span см
-
-              .calculator-block__item
-                .calculator-block__name
+              .calculator-block__item.calculator-block__item--col-5
+                .calculator-block__name Зіп код
                   a(href='#').calculator-block__name--quest Потрібна допомога?
                     include ../img/home/help.svg
-                .calculator-block__select-item
-                  a(href="#").site-btn Розрахувати
+                .calculator-block__select-wrap
+                  .calculator-block__select-item.calculator-block__select-item--col-9
+                    .calculator-block__input
+                      input(type='text' placeholder='Наприклад: 10001')
+                  .calculator-block__select-item.calculator-block__select-item--col-3
+                    a(href="#").site-btn Розрахувати
+              //.calculator-block__item
+              //  .calculator-block__name
+              //    a(href='#').calculator-block__name--quest Потрібна допомога?
+              //      include ../img/home/help.svg
+              //  .calculator-block__select-item
+              //    a(href="#").site-btn Розрахувати
 
 
 
