@@ -701,7 +701,14 @@ function initLanguageMenu() {
         }
 
         target.closest('.header__languages').classList.toggle('open')
+    })
 
+    document.addEventListener('click', (e) => {
+        let target = e.target
+        if(target.closest('.header__languages')) {
+            return
+        }
+        document.querySelector('.header__languages.open').classList.toggle('open')
     })
 }
 

@@ -27,33 +27,42 @@ block content
         .calculator-block
           .calculator-block__inner
             .calculator-block__items
-              .calculator-block__item
+              .calculator-block__item.calculator-block__item--col-5
                 .calculator-block__name Відправити звідки...
                 .calculator-block__select
-                  .calculator-block__select-cuctom
-                    label(for='sender').calculator-block__selected Велікобританія
-                    input(type='text' id='sender' value='' placeholder='Поштовий індекс (рекомендуємо)')
-                    .calculator-block__select--found
-              .calculator-block__item
+                  select
+                    option(value='Велікобританія') Велікобританія
+                  //.calculator-block__select-cuctom
+                  //  label(for='sender').calculator-block__selected Велікобританія
+                  //  input(type='text' id='sender' value='' placeholder='Поштовий індекс (рекомендуємо)')
+                  //  .calculator-block__select--found
+              .calculator-block__item.calculator-block__item--col-5
                 .calculator-block__name Доставити куди...
                 .calculator-block__select
-                  .calculator-block__select-cuctom
-                    label(for='delivery').calculator-block__selected Оберіть
-                    input(type='text' id='delivery' value='' placeholder='Поштовий індекс (рекомендуємо)')
-                    .calculator-block__select--found
-              .calculator-block__item
-                .calculator-block__name Що ви відправляєте?
-                  a(href='#').calculator-block__name--quest Потрібна допомога?
-                    include ../img/home/help.svg
-                .calculator-block__select-wrap
-                  .calculator-block__select-item.calculator-block__select-item--col-3
-                    .calculator-block__select
-                      select
-                        option(value='1') 1
-                  .calculator-block__select-item.calculator-block__select-item--col-9
-                    .calculator-block__select
-                      select
-                        option(value='Посилка') Посилка
+                  select
+                    option(value='Оберіть') Оберіть
+                  //.calculator-block__select-cuctom
+                  //  label(for='delivery').calculator-block__selected Оберіть
+                  //  input(type='text' id='delivery' value='' placeholder='Поштовий індекс (рекомендуємо)')
+                  //  .calculator-block__select--found
+              .calculator-block__item.calculator-block__item--col-2
+                .calculator-block__name Зіп код
+                .calculator-block__select
+                  .calculator-block__input
+                    input(type='text' placeholder='Наприклад: 10001')
+              //.calculator-block__item
+              //  .calculator-block__name Що ви відправляєте?
+              //    a(href='#').calculator-block__name--quest Потрібна допомога?
+              //      include ../img/home/help.svg
+              //  .calculator-block__select-wrap
+              //    .calculator-block__select-item.calculator-block__select-item--col-3
+              //      .calculator-block__select
+              //        select
+              //          option(value='1') 1
+              //    .calculator-block__select-item.calculator-block__select-item--col-9
+              //      .calculator-block__select
+              //        select
+              //          option(value='Посилка') Посилка
               .calculator-block__item
                 .calculator-block__select-wrap.calculator-block__select-wrap--column
                   .calculator-block__select-item.calculator-block__select-item--col-3
@@ -76,29 +85,41 @@ block content
                     .calculator-block__input
                       input(type='text')
                       span см
+
               .calculator-block__item
-                .calculator-block__txt.calculator-block__txt--img
-                  include ../img/home/box.svg
-                  | Використовуйте збережену партію
-              .calculator-block__item
-                .calculator-block__radio
-                  .calculator-block__radio-txt Вимірювання:
-                  .calculator-block__radio-item
-                    input(type="radio" id='kg' name='weight_type' value='kg/cm' checked='true')
-                    label(for='kg').calculator-block__radio-label kg/cm
-                  .calculator-block__radio-item
-                    input(type="radio" id='lb' name='weight_type' value='lb/inches')
-                    label(for='lb').calculator-block__radio-label lb/inches
+                .calculator-block__name
+                  a(href='#').calculator-block__name--quest Потрібна допомога?
+                    include ../img/home/help.svg
+                .calculator-block__select-item
+                  a(href="#").site-btn Розрахувати
+
+
+
+
+              //.calculator-block__item
+                //.calculator-block__txt.calculator-block__txt--img
+                //  include ../img/home/box.svg
+                //  | Використовуйте збережену партію
+              //.calculator-block__item
+              //  .calculator-block__radio
+              //    .calculator-block__radio-txt Вимірювання:
+              //    .calculator-block__radio-item
+              //      input(type="radio" id='kg' name='weight_type' value='kg/cm' checked='true')
+              //      label(for='kg').calculator-block__radio-label kg/cm
+              //    .calculator-block__radio-item
+              //      input(type="radio" id='lb' name='weight_type' value='lb/inches')
+              //      label(for='lb').calculator-block__radio-label lb/inches
 
             .calculator-block__footer
               .calculator-block__footer__left
-                a(href="#").site-btn Розрахувати
-              .calculator-block__footer__right
                 .calculator-block__footer-totals
                   .calculator-block__footer-total Стандартна доставка:
                     span $5
                   .calculator-block__footer-total Експрес:
                     span $10
+
+                //a(href="#").site-btn Розрахувати
+                //.calculator-block__footer__right
 
     .section-delivery.lazyload
       .container
