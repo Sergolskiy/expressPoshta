@@ -708,7 +708,9 @@ function initLanguageMenu() {
         if(target.closest('.header__languages')) {
             return
         }
-        document.querySelector('.header__languages.open').classList.toggle('open')
+        if(document.querySelector('.header__languages.open')) {
+            document.querySelector('.header__languages.open').classList.toggle('open')
+        }
     })
 }
 
@@ -732,6 +734,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initLanguageMenu()
     initShowBlock()
 
+    $('.form-select').select2({
+        minimumResultsForSearch: -1,
+        // placeholder: $(this).data('placeholder'),
+    });
 
     // if (document.querySelector('.site-datepicker')) {
     //     const picker = datepicker('.site-datepicker input')
