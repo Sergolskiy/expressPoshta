@@ -1442,6 +1442,11 @@
     font-size: 18px;
     line-height: 25px;
     color: #FFFFFF;
+    transition: 0.3s;
+
+    &:hover {
+      color: #1E90FF;
+    }
   }
 
 
@@ -1483,6 +1488,11 @@
     a {
       margin-left: 10px;
       color: #FFFFFF;
+      transition: 0.3s;
+
+      &:hover {
+        color: #1E90FF;
+      }
     }
   }
 
@@ -1528,9 +1538,23 @@
   color: black;
 }
 
+.select2-selection__rendered {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+  color: #292B4F;
+  padding: 0 !important;
+}
+
 .select2-results__option {
   background: white;
-  color: black;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+  color: #292B4F;
+  padding: 10px 20px;
+  height: 45px;
+
 
   &:hover {
     background: #f4f6fd !important;
