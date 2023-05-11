@@ -69,6 +69,11 @@
   line-height: 60px;
   color: #292B4F;
 
+  @include for-992 {
+    font-size: 37px;
+    line-height: 44px;
+  }
+
   &.main-title {
     letter-spacing: 0.1em;
     span {
@@ -146,6 +151,19 @@
     border-right: 2px solid #1E90FF;
     margin-right: 20px;
     height: 120px;
+
+    @include for-1600 {
+      margin-right: 15px;
+      max-width: 150px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @include for-1200 {
+      max-width: 100px;
+    }
   }
 
   &__column {
@@ -162,6 +180,10 @@
     width: 100%;
     max-width: 850px;
     margin-right: 11px;
+
+    @include for-1600 {
+      margin-right: 0;
+    }
   }
 
   &__menu {
@@ -171,7 +193,14 @@
   }
 
   &__menu-item {
+    padding: 0 5px;
 
+    @include for-1200 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__menu-link {
@@ -180,6 +209,14 @@
     color: #292B4F;
     font-weight: 500;
     font-size: 14px;
+
+    @include for-1600 {
+      font-size: 13px;
+    }
+
+    @include for-1200 {
+      font-size: 12px;
+    }
 
     &::after {
       content: '';
@@ -203,6 +240,10 @@
   &__languages {
     position: relative;
     margin: 0px 21px 0 33px;
+
+    @include for-1600 {
+      margin: 0 15px 0 15px;
+    }
 
     &.open {
       .header__languages-items {
@@ -316,17 +357,39 @@
     font-size: 20px;
     line-height: 27px;
     margin-right: 29px;
+    white-space: nowrap;
+
+    @include for-1600 {
+      margin-right: 15px;
+      font-size: 18px;
+    }
+
+    @include for-1200 {
+      font-size: 15px;
+    }
   }
 
   &__social {
     display: flex;
     margin-right: 20px;
+
+    @include for-1600 {
+      margin-right: 15px;
+    }
+
+    @include for-1440 {
+      margin-right: 0;
+    }
   }
 
   &__social-item {
     display: flex;
     align-items: center;
     margin-right: 14px;
+
+    @include for-1440 {
+      margin-right: 10px;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -347,15 +410,46 @@
     font-size: 14px;
     line-height: 19px;
     padding: 14px 16px 17px;
+    white-space: nowrap;
+
+    @include for-1600 {
+      font-size: 13px;
+    }
+
+    @include for-1440 {
+      display: none;
+    }
   }
 
   &__bottom {
+    @include for-1440 {
+      display: flex;
+      justify-content: space-between;
+    }
 
+    & > .site-btn {
+      display: none;
+
+      @include for-1440 {
+        display: initial;
+        height: 50px;
+        margin-top: 21px;
+        padding: 14px 25px;
+        font-size: 14px;
+      }
+    }
   }
 
   &__search {
     display: flex;
     margin-top: 21px;
+    max-width: 605px;
+    margin-left: auto;
+
+    @include for-1440 {
+      margin-left: 0;
+      width: 100%;
+    }
   }
 
   &__search-input {
@@ -403,7 +497,8 @@
   .site-title-txt {
     display: flex;
     flex-direction: column;
-    max-width: 653px;
+    max-width: 500px;
+    width: 100%;
   }
 }
 
@@ -481,6 +576,12 @@
 
     &--col-5 {
       width: 41.66%;
+    }
+
+    &--col-md-7 {
+      @include for-1400 {
+        width: 58.33%;
+      }
     }
   }
 
@@ -751,6 +852,10 @@
   &__footer__left {
     width: 50%;
 
+    @include for-1400 {
+      width: 100%;
+    }
+
     .site-btn {
       padding: 14px 40px;
     }
@@ -765,6 +870,10 @@
 
   &__footer-totals {
     display: flex;
+
+    .site-btn {
+      margin-left: 40px;
+    }
   }
 
   &__footer-total {
@@ -821,6 +930,10 @@
     .site-title {
       max-width: 365px;
       margin-right: 80px;
+
+      @include for-1300 {
+        margin-right: 20px;
+      }
     }
 
     .site-btn {
@@ -857,6 +970,12 @@
     width: 33%;
     padding: 0 15px;
     margin-top: 114px;
+    display: flex;
+    align-items: stretch;
+
+    @include for-1300 {
+      margin-top: 65px;
+    }
 
     &:before {
       content: '';
@@ -889,6 +1008,7 @@
     background: white;
     border-radius: 10px;
     z-index: 2;
+    width: 100%;
 
     & > svg {
       position: absolute;
@@ -897,6 +1017,11 @@
       width: 405px;
       height: 246px;
       z-index: 1;
+
+      @include for-1600 {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -955,6 +1080,11 @@
   margin-top: 214px;
   padding-bottom: 235px;
 
+  @include for-1300 {
+    margin-top: 155px;
+    padding-bottom: 85px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -963,6 +1093,10 @@
   &__left {
     width: 100%;
     max-width: 730px;
+
+    @include for-1300 {
+      max-width: 500px;
+    }
 
     .site-title-btn-wrap {
       margin-top: 21px;
@@ -979,15 +1113,19 @@
   &__right-img {
     margin-top: 41px;
     margin-right: 69px;
-
     position: absolute;
     top: 0;
     right: 0;
-    //overflow: hidden;
 
-    //> svg {
-    //  margin-right: -85px;
-    //}
+    @include for-1400 {
+      margin-right: 0;
+    }
+
+    & > svg {
+      @include for-1400 {
+        width: 270px;
+      }
+    }
 
     &:before {
       content: '';
@@ -1002,6 +1140,13 @@
       border-radius: 50%;
       margin-left: -193px;
       margin-top: -70px;
+
+      @include for-1400 {
+        margin-left: -120px;
+        margin-top: 10px;
+        width: 370px;
+        height: 370px;
+      }
     }
 
     &:after {
@@ -1046,21 +1191,41 @@
   &.send {
       margin-top: -143px;
       margin-left: -111px;
+
+      @include for-1400 {
+        margin-top: -90px;
+        margin-left: -50px;
+      }
     }
 
     &.box {
       margin-top: -3px;
       margin-left: -306px;
+
+      @include for-1400 {
+        margin-top: 4px;
+        margin-left: -230px;
+      }
     }
 
     &.money {
       margin-top: 225px;
       margin-left: -348px;
+
+      @include for-1400 {
+        margin-top: 235px;
+        margin-left: -250px;
+      }
     }
 
     &.docs {
       margin-top: 377px;
       margin-left: -60px;
+
+      @include for-1400 {
+        margin-top: 330px;
+        margin-left: 13px;
+      }
     }
 
   }
@@ -1098,6 +1263,7 @@
 
   &__items {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 54px;
   }
 
@@ -1106,6 +1272,11 @@
     display: flex;
     align-items: center;
     width: 25%;
+
+    @include for-1300 {
+      width: 50%;
+      margin-bottom: 20px;
+    }
 
     &:nth-child(2) {
       .how-send__img {
@@ -1214,6 +1385,10 @@
   &__txt-block{
     max-width: 1068px;
     margin-top: 37px;
+
+    @include for-1440 {
+      max-width: 100%;
+    }
   }
 
 
@@ -1226,6 +1401,11 @@
     overflow: hidden;
     max-height: 230px;
     transition: 0.3s;
+
+    @include for-1600 {
+      font-size: 15px;
+      line-height: 25px;
+    }
 
     &.show {
       max-height: 2000px;
@@ -1298,6 +1478,10 @@
       width: 100%;
       max-width: 365px;
       margin-right: 80px;
+
+      @include for-1200 {
+        margin-right: 25px;
+      }
     }
   }
 
@@ -1406,6 +1590,10 @@
 
   &__logo {
     margin-right: 133px;
+
+    @include for-1600 {
+      margin-right: 90px;
+    }
   }
 
 
@@ -1434,6 +1622,7 @@
 
   &__menu-item {
     margin-bottom: 10px;
+    padding: 0 7px;
   }
 
 
@@ -1443,6 +1632,10 @@
     line-height: 25px;
     color: #FFFFFF;
     transition: 0.3s;
+
+    @include for-1600 {
+      font-size: 15px;
+    }
 
     &:hover {
       color: #1E90FF;
