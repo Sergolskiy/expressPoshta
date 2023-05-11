@@ -20,7 +20,7 @@
   display: block;
   width: fit-content;
   //max-width: 197px;
-  background: #1E90FF;
+  background: #0F80CC; //#1E90FF;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   font-weight: 500;
@@ -49,7 +49,7 @@
     box-shadow: initial;
 
     &:hover {
-      background: #0F80CC;
+      background: #0F80CC; //#0F80CC;
       color: white;
     }
   }
@@ -112,6 +112,15 @@
   margin-top: 40px;
 }
 
+.mobile-menu-btn {
+  display: none;
+  margin-left: auto;
+
+  @include for-992 {
+    display: block;
+  }
+}
+
 .homepage .page__wrapper{
   background: #F4F6FE url('../img/home/top_bg.svg') right -50px no-repeat;
 }
@@ -125,6 +134,10 @@
   position: relative;
   z-index: 10;
   padding-top: 25px;
+
+  @include for-992 {
+    padding-top: 20px;
+  }
 
   &:before {
     content: '';
@@ -152,6 +165,10 @@
     margin-right: 20px;
     height: 120px;
 
+    @include for-992 {
+      height: 65px;
+    }
+
     @include for-1600 {
       margin-right: 15px;
       max-width: 150px;
@@ -174,6 +191,10 @@
     display: flex;
     align-items: center;
     width: 100%;
+
+    @include for-992 {
+      padding-top: 6px;
+    }
   }
 
   &__munu-wrap {
@@ -183,6 +204,10 @@
 
     @include for-1600 {
       margin-right: 0;
+    }
+
+    @include for-992 {
+      display: none;
     }
   }
 
@@ -243,6 +268,10 @@
 
     @include for-1600 {
       margin: 0 15px 0 15px;
+    }
+
+    @include for-992 {
+      display: none;
     }
 
     &.open {
@@ -359,6 +388,10 @@
     margin-right: 29px;
     white-space: nowrap;
 
+    @include for-992 {
+      display: none;
+    }
+
     @include for-1600 {
       margin-right: 15px;
       font-size: 18px;
@@ -379,6 +412,10 @@
 
     @include for-1440 {
       margin-right: 0;
+    }
+
+    @include for-992 {
+      display: none;
     }
   }
 
@@ -419,12 +456,20 @@
     @include for-1440 {
       display: none;
     }
+
+    @include for-992 {
+      display: block;
+    }
   }
 
   &__bottom {
     @include for-1440 {
       display: flex;
       justify-content: space-between;
+    }
+
+    @include for-992 {
+      margin-left: -115px;
     }
 
     & > .site-btn {
@@ -436,6 +481,10 @@
         margin-top: 21px;
         padding: 14px 25px;
         font-size: 14px;
+      }
+
+      @include for-992 {
+        display: none;
       }
     }
   }
@@ -449,6 +498,10 @@
     @include for-1440 {
       margin-left: 0;
       width: 100%;
+    }
+
+    @include for-992 {
+      max-width: 100%;
     }
   }
 
@@ -487,6 +540,17 @@
   padding-top: 99px;
   z-index: 2;
 
+  @include for-992 {
+    padding-top: 0;
+  }
+
+  .container {
+    @include for-992 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
   .site-title {
     width: 100%;
     display: flex;
@@ -499,6 +563,10 @@
     flex-direction: column;
     max-width: 500px;
     width: 100%;
+
+    @include for-992 {
+      display: none;
+    }
   }
 }
 
@@ -507,6 +575,16 @@
   width: 100%;
   justify-content: flex-end;
   padding-bottom: 10px;
+
+  @include for-992 {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+
+  @include for-768 {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__item {
     display: flex;
@@ -521,6 +599,11 @@
     line-height: 22px;
     color: #1C1D45;
     margin-right: 20px;
+
+    @include for-768 {
+      max-width: 100% !important;
+      margin-bottom: 20px;
+    }
 
 
     &:nth-child(1) {
@@ -581,6 +664,12 @@
     &--col-md-7 {
       @include for-1400 {
         width: 58.33%;
+      }
+    }
+
+    &--col-sm-12 {
+      @include for-992 {
+        width: 100%;
       }
     }
   }
@@ -873,6 +962,10 @@
 
     .site-btn {
       margin-left: 40px;
+
+      @include for-992 {
+        display: none;
+      }
     }
   }
 
@@ -902,6 +995,10 @@
 
 .section-delivery {
   margin-top: 309px;
+
+  @include for-992 {
+    margin-top: 40px;
+  }
 }
 
 .delivery {
@@ -927,6 +1024,10 @@
     z-index: 2;
     display: flex;
 
+    @include for-992 {
+      flex-direction: column;
+    }
+
     .site-title {
       max-width: 365px;
       margin-right: 80px;
@@ -948,6 +1049,11 @@
     flex-wrap: wrap;
     width: 100%;
     margin: -239px -15px 0;
+
+    @include for-992 {
+      margin: 20px -15px 0;
+      width: initial;
+    }
 
     &:before {
       content: '';
@@ -975,6 +1081,15 @@
 
     @include for-1300 {
       margin-top: 65px;
+    }
+
+    @include for-992 {
+      margin-top: 30px;
+      width: 50%;
+    }
+
+    @include for-550 {
+      width: 100%;
     }
 
     &:before {
@@ -1010,6 +1125,10 @@
     z-index: 2;
     width: 100%;
 
+    @include for-550 {
+      overflow: hidden;
+    }
+
     & > svg {
       position: absolute;
       bottom: -3px;
@@ -1021,6 +1140,12 @@
       @include for-1600 {
         width: 100%;
         height: auto;
+      }
+
+      @include for-550 {
+        width: 70%;
+        height: auto;
+        margin-right: -30px;
       }
     }
   }
@@ -1085,9 +1210,21 @@
     padding-bottom: 85px;
   }
 
+  @include for-992 {
+    margin-top: 40px;
+  }
+
+  @include for-550 {
+    padding-bottom: 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include for-992 {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -1098,8 +1235,26 @@
       max-width: 500px;
     }
 
+    @include for-992 {
+      min-width: 100%;
+    }
+
     .site-title-btn-wrap {
       margin-top: 21px;
+
+      @include for-550 {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+
+        span {
+          margin-top: 0;
+        }
+
+        .site-btn {
+          margin-top: 10px;
+        }
+      }
     }
   }
 
@@ -1107,6 +1262,15 @@
   &__right {
     position: relative;
     width: 50%;
+
+    @include for-992 {
+      width: 100%;
+      height: 470px;
+    }
+
+    @include for-550 {
+      height: auto;
+    }
   }
 
 
@@ -1121,9 +1285,27 @@
       margin-right: 0;
     }
 
+    @include for-992 {
+      left: 280px;
+      top: 90px;
+    }
+
+    @include for-550 {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     & > svg {
       @include for-1400 {
         width: 270px;
+      }
+
+      @include for-550 {
+        display: none;
       }
     }
 
@@ -1147,6 +1329,10 @@
         width: 370px;
         height: 370px;
       }
+
+      @include for-550 {
+        display: none;
+      }
     }
 
     &:after {
@@ -1162,6 +1348,10 @@
       filter: blur(250px);
       border-radius: 50%;
       margin-left: -430px;
+
+      @include for-550 {
+        margin-left: 0;
+      }
     }
   }
 
@@ -1178,17 +1368,27 @@
     line-height: 25px;
     color: #292B4F;
 
+    @include for-550 {
+      position: static;
+      flex-direction: column-reverse !important;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      width: 50%;
+      margin: 0 !important;
+    }
+
     &:nth-child(2){
       flex-direction: column;
       justify-content: center;
     }
 
-  &:nth-child(5) {
-    flex-direction: column-reverse;
-    justify-content: center;
-  }
+    &:nth-child(5) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
 
-  &.send {
+    &.send {
       margin-top: -143px;
       margin-left: -111px;
 
@@ -1256,6 +1456,10 @@
   z-index: 2;
   margin-top: 77px;
 
+  @include for-550 {
+    margin-top: 40px;
+  }
+
   &__inner {
 
   }
@@ -1265,6 +1469,10 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 54px;
+
+    @include for-768 {
+      margin-top: 35px;
+    }
   }
 
 
@@ -1276,6 +1484,10 @@
     @include for-1300 {
       width: 50%;
       margin-bottom: 20px;
+    }
+
+    @include for-768 {
+      width: 100%;
     }
 
     &:nth-child(2) {
@@ -1373,6 +1585,10 @@
   margin-top: 120px;
   background: url('../img/home/who-we/plane.svg') 90% 183px no-repeat, url("../img/home/who-we/map.svg") 96% 25px no-repeat;
   min-height: 360px;
+
+  @include for-992 {
+    margin-top: 40px;
+  }
 }
 
 .who-we {
@@ -1474,6 +1690,11 @@
     display: flex;
     align-items: center;
 
+    @include for-992 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .site-title {
       width: 100%;
       max-width: 365px;
@@ -1482,6 +1703,15 @@
       @include for-1200 {
         margin-right: 25px;
       }
+
+      @include for-992 {
+        margin-bottom: 15px;
+        max-width: 100%;
+
+        .site-title-txt br {
+          display: none;
+        }
+      }
     }
   }
 
@@ -1489,6 +1719,10 @@
   &__items {
     display: flex;
     justify-content: space-between;
+
+    @include for-800 {
+      flex-direction: column;
+    }
   }
 
 
@@ -1499,6 +1733,11 @@
     width: 100%;
     max-width: 405px;
     background: #FFFFFF;
+
+    @include for-800 {
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
 
     &:before {
       content: '';
