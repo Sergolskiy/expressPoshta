@@ -546,6 +546,118 @@
 
 }
 
+.header-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 20;
+  transform: translateX(100%);
+  transition: 0.3s;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &__inner {
+    padding: 30px 15px;
+  }
+
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+
+  &__logo {
+    img {
+      width: 120px;
+    }
+  }
+
+
+  &__lang {
+    margin-left: auto;
+
+    .header__languages {
+      display: block;
+    }
+  }
+
+
+  &__close {
+
+  }
+
+
+  &__menu {
+    margin-top: 35px;
+  }
+
+
+  &__menu-item {
+    margin-bottom: 25px;
+    text-align: right;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  &__menu-link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #292B4F;
+  }
+
+
+  &__phone {
+    text-align: right;
+    margin-top: 40px;
+
+    .header__phone a {
+      display: block;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      margin-right: 0;
+    }
+  }
+
+
+  &__social {
+    margin-top: 25px;
+
+    .header__social {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+
+  &__btn {
+    margin-top: 40px;
+
+    .site-btn {
+      padding: 14px 40px;
+      width: 100%;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+}
+
+
+
+
 .section-calculator {
   position: relative;
   padding-top: 99px;
@@ -614,6 +726,10 @@
     @include for-768 {
       max-width: 100% !important;
       margin-bottom: 20px;
+
+      br {
+        display: none;
+      }
     }
 
 
@@ -709,6 +825,10 @@
     font-size: 17px;
     line-height: 23px;
     color: #1E90FF;
+
+    @include for-992 {
+      display: none;
+    }
 
     @include for-550 {
       margin-left: 15px;
@@ -816,6 +936,27 @@
     &--column {
 
     }
+
+    &.dimensions .calculator-block__select-item{
+      @include for-992 {
+        &:nth-child(1) {
+          order: 1;
+        }
+
+        &:nth-child(2) {
+          order: 4;
+        }
+
+        &:nth-child(3) {
+          order: 3;
+        }
+
+        &:nth-child(4) {
+          order: 2;
+        }
+
+      }
+    }
   }
 
   &__select-item {
@@ -826,6 +967,10 @@
     }
 
     &--col-3 {
+      width: 25%;
+    }
+
+    &--col-4 {
       width: 33.33%;
     }
 
@@ -833,8 +978,12 @@
       width: 50%;
     }
 
-    &--col-9 {
+    &--col-8 {
       width: 66.66%;
+    }
+
+    &--col-9 {
+      width: 75%;
     }
 
     &--col-sm-6 {
@@ -858,7 +1007,7 @@
       padding: 14px 20px;
       width: 100%;
 
-      @include for-550 {
+      @include for-992 {
         max-width: 200px;
         margin-top: 20px;
       }
@@ -1098,6 +1247,8 @@
     }
 
     .site-btn {
+      position: relative;
+      z-index: 3;
       max-width: inherit;
       width: fit-content;
     }
@@ -1220,6 +1371,20 @@
     padding-bottom: 14px;
     margin-bottom: 15px;
     border-bottom: 1px solid #ababab;
+
+    @include for-1400 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include for-1200 {
+      font-size: 17px;
+    }
+
+    @include for-992 {
+      display: block;
+      font-size: 22px;
+    }
 
     svg {
       margin-right: 20px;
@@ -1456,6 +1621,10 @@
         margin-top: -90px;
         margin-left: -50px;
       }
+
+      @include for-550 {
+        order: 4;
+      }
     }
 
     &.box {
@@ -1465,6 +1634,10 @@
       @include for-1400 {
         margin-top: 4px;
         margin-left: -230px;
+      }
+
+      @include for-550 {
+        order: 1;
       }
     }
 
@@ -1476,6 +1649,10 @@
         margin-top: 235px;
         margin-left: -250px;
       }
+
+      @include for-550 {
+        order: 2;
+      }
     }
 
     &.docs {
@@ -1485,6 +1662,10 @@
       @include for-1400 {
         margin-top: 330px;
         margin-left: 13px;
+      }
+
+      @include for-550 {
+        order: 3;
       }
     }
 
@@ -1793,7 +1974,7 @@
     display: flex;
     align-items: center;
 
-    @include for-992 {
+    @include for-1100 {
       flex-direction: column;
       align-items: flex-start;
     }

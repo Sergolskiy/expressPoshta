@@ -693,14 +693,18 @@ function initEditBlock() {
 }
 
 function initLanguageMenu() {
-    let block = document.querySelector('.header__languages')
-    block.addEventListener('click', (e) => {
-        let target = e.target
-        if(target.classList.contains('header__languages-item')) {
-            document.querySelector('.header__languages-selected').innerHTML = target.innerHTML
-        }
+    let blocks = document.querySelectorAll('.header__languages')
+    blocks.forEach(block => {
+        // let block = document.querySelector('.header__languages')
+        block.addEventListener('click', (e) => {
+            let target = e.target
+            if (target.classList.contains('header__languages-item')) {
+                document.querySelectorAll('.header__languages-selected')[0].innerHTML = target.innerHTML
+                document.querySelectorAll('.header__languages-selected')[1].innerHTML = target.innerHTML
+            }
 
-        target.closest('.header__languages').classList.toggle('open')
+            target.closest('.header__languages').classList.toggle('open')
+        })
     })
 
     document.addEventListener('click', (e) => {
@@ -729,10 +733,23 @@ function initShowBlock() {
     })
 }
 
+function initShowMobileMenu() {
+    let btns = document.querySelectorAll('.mobile-menu-btn')
+    btns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            let block = document.querySelector('.header-mobile')
+            block.classList.toggle('open')
+
+        })
+    })
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     initLanguageMenu()
     initShowBlock()
+    initShowMobileMenu()
 
     $('.form-select').select2({
         minimumResultsForSearch: -1,
