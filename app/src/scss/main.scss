@@ -130,6 +130,17 @@
   background: #F4F6FE;
 }
 
+.homepage .main-wrap {
+  @include for-550 {
+    display: flex;
+    flex-direction: column;
+
+    //.section-who-we {
+    //  order: 20;
+    //}
+  }
+}
+
 .header {
   position: relative;
   z-index: 10;
@@ -640,6 +651,10 @@
     display: flex;
     flex-direction: column;
     padding: 40px;
+
+    @include for-768 {
+      padding: 20px 10px 40px;
+    }
   }
 
   &__items {
@@ -652,6 +667,10 @@
     width: 33.33%;
     padding: 0 10px;
     margin-bottom: 28px;
+
+    @include for-550 {
+      margin-bottom: 15px;
+    }
 
     &--col-2 {
       width: 16.66%;
@@ -690,6 +709,10 @@
     font-size: 17px;
     line-height: 23px;
     color: #1E90FF;
+
+    @include for-550 {
+      margin-left: 15px;
+    }
 
     svg {
       margin-left: 6px;
@@ -786,6 +809,7 @@
 
   &__select-wrap {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -10px;
 
 
@@ -796,6 +820,10 @@
 
   &__select-item {
     padding: 0 10px;
+
+    @include for-992 {
+      margin-bottom: 10px;
+    }
 
     &--col-3 {
       width: 33.33%;
@@ -809,6 +837,18 @@
       width: 66.66%;
     }
 
+    &--col-sm-6 {
+      @include for-992 {
+        width: 50%;
+      }
+    }
+
+    &--col-sm-12 {
+      @include for-992 {
+        width: 100%;
+      }
+    }
+
     .calculator-block__name {
       margin-left: 0;
       text-align: center;
@@ -817,6 +857,11 @@
     .site-btn {
       padding: 14px 20px;
       width: 100%;
+
+      @include for-550 {
+        max-width: 200px;
+        margin-top: 20px;
+      }
     }
 
   }
@@ -936,6 +981,11 @@
     justify-content: space-between;
     padding-top: 30px;
     border-top: 1px dashed #9AB5D9;
+
+    @include for-550 {
+      padding-top: 0px;
+      border-top: 0;
+    }
   }
 
   &__footer__left {
@@ -979,6 +1029,16 @@
     font-size: 15px;
     line-height: 23px;
     color: #292B4F;
+
+    @include for-550 {
+      border-left: 0;
+      padding: 0;
+    }
+
+    @include for-420 {
+      font-size: 13px;
+      margin-left: 10px;
+    }
 
     &:first-child {
       margin-left: 0;
@@ -1587,14 +1647,44 @@
   min-height: 360px;
 
   @include for-992 {
+    position: relative;
+    z-index: 2;
     margin-top: 40px;
+  }
+
+  @include for-550 {
+    margin-top: 20px;
+    padding-bottom: 250px;
+    background: url('../img/home/who-we/plane-mob.svg') center 100% no-repeat, url("../img/home/who-we/map-mob.svg") center 100% no-repeat;
+    //background-size: 100%;
   }
 }
 
 .who-we {
 
-  &__inner{
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 435px;
+    margin-right: -245px;
+    width: 537px;
+    height: 537px;
+    background: #ffd250;
+    opacity: .2;
+    filter: blur(250px);
+    display: none;
 
+
+    @include for-550 {
+      display: block;
+    }
+  }
+
+  &__inner{
+    position: relative;
+    z-index: 2;
   }
 
 
@@ -1656,6 +1746,10 @@
   &__btn{
     margin-top: 77px;
     min-width: 260px;
+
+    @include for-992 {
+      margin-top: 30px;
+    }
   }
 
 }
@@ -1678,6 +1772,11 @@
     opacity: .2;
     -webkit-filter: blur(250px);
     filter: blur(250px);
+
+
+    @include for-550 {
+      display: none;
+    }
   }
 }
 
@@ -1685,6 +1784,10 @@
   position: relative;
   z-index: 2;
   margin-top: 96px;
+
+  @include for-550 {
+    margin-top: 30px;
+  }
 
   &__inner {
     display: flex;
@@ -1808,6 +1911,10 @@
   background: #092649;
   margin-top: 150px;
 
+  @include for-992 {
+    margin-top: 50px;
+  }
+
   &__inner {
     padding: 33px 0 23px;
   }
@@ -1819,6 +1926,10 @@
     border-bottom: 1px solid #223d5a;
     padding-bottom: 15px;
     margin-bottom: 23px;
+
+    @include for-680 {
+      flex-direction: column;
+    }
   }
 
 
@@ -1833,6 +1944,10 @@
     @include for-1600 {
       margin-right: 90px;
     }
+
+    @include for-992 {
+      display: none;
+    }
   }
 
 
@@ -1840,12 +1955,47 @@
     width: 100%;
     max-width: 1231px;
     margin-right: 40px;
+
+    @include for-768 {
+      margin-right: 0;
+    }
   }
 
 
   &__menu-wrap {
     display: flex;
     justify-content: space-between;
+
+    @include for-680 {
+      flex-wrap: wrap;
+
+      .footer__menu-col:nth-child(1) {
+        width: 50%;
+      }
+
+      .footer__menu-col:nth-child(2) {
+        width: 50%;
+      }
+
+      .footer__menu-col:nth-child(3) {
+        width: 100%;
+
+        .footer__menu {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        .footer__menu-item {
+          width: 50%;
+        }
+      }
+
+      .footer__menu-col:nth-child(4) {
+        width: 100%;
+        margin-top: 25px;
+      }
+    }
   }
 
 
