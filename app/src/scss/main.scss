@@ -1810,13 +1810,27 @@
 
 
   &__right {
+    position: relative;
     width: 100%;
     max-width: 525px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 774px;
+      height: 827px;
+      right: -150px;
+      top: 50px;
+      background: #FFD250;
+      opacity: 0.2;
+      filter: blur(250px);
+    }
   }
 
 
   &__form {
-
+    position: relative;
+    z-index: 2;
   }
 
 
