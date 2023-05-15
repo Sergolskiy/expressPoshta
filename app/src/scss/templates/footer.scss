@@ -1,5 +1,181 @@
 @import "../modules/_help";
 
+
 .footer {
+  position: relative;
+  z-index: 2;
+  background: #092649;
+  margin-top: 150px;
+
+  @include for-992 {
+    margin-top: 50px;
+  }
+
+  &__inner {
+    padding: 33px 0 23px;
+  }
+
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #223d5a;
+    padding-bottom: 15px;
+    margin-bottom: 23px;
+
+    @include for-680 {
+      flex-direction: column;
+    }
+  }
+
+
+  &__left {
+
+  }
+
+
+  &__logo {
+    margin-right: 133px;
+
+    @include for-1600 {
+      margin-right: 90px;
+    }
+
+    @include for-1100 {
+      margin-right: 40px;
+    }
+
+    @include for-992 {
+      display: none;
+    }
+  }
+
+
+  &__center {
+    width: 100%;
+    max-width: 1231px;
+    margin-right: 40px;
+
+    @include for-1100 {
+      margin-right: 0;
+    }
+  }
+
+
+  &__menu-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @include for-680 {
+      flex-wrap: wrap;
+
+      .footer__menu-col:nth-child(1) {
+        width: 50%;
+      }
+
+      .footer__menu-col:nth-child(2) {
+        width: 50%;
+      }
+
+      .footer__menu-col:nth-child(3) {
+        width: 100%;
+
+        .footer__menu {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        .footer__menu-item {
+          width: 50%;
+        }
+      }
+
+      .footer__menu-col:nth-child(4) {
+        width: 100%;
+        margin-top: 25px;
+      }
+    }
+  }
+
+
+  &__menu-col {
+
+  }
+
+
+  &r__menu {
+
+  }
+
+
+  &__menu-item {
+    margin-bottom: 10px;
+    padding: 0 7px;
+  }
+
+
+  &__menu-link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    transition: 0.3s;
+
+    @include for-1600 {
+      font-size: 15px;
+    }
+
+    &:hover {
+      color: #1E90FF;
+    }
+  }
+
+
+  &__right {
+
+  }
+
+
+  &__social {
+    display: flex;
+  }
+
+
+  &__social-item {
+    &:first-child {
+      margin-right: 25px;
+    }
+
+    svg rect {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      svg rect {
+        fill: #1E90FF;
+        fill-opacity: 1;
+      }
+    }
+  }
+
+
+  &__bottom {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+
+    a {
+      margin-left: 10px;
+      color: #FFFFFF;
+      transition: 0.3s;
+
+      &:hover {
+        color: #1E90FF;
+      }
+    }
+  }
 
 }

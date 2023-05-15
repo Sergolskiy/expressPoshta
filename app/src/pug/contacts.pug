@@ -1,0 +1,140 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Contacts";
+  - var pageClass = "contacts";
+  - var pageActive = "contacts";
+
+block content
+  div.main-wrap
+    .section-contacts
+      .container
+        .site-title
+          h1.site-title-txt.main-title
+            span Контакти
+        .contacts
+          .contacts__inner
+            .contacts__feft
+              .tabs-block(data-tabs)
+                .contacts__tabs
+                  a(href="javascript:void(0)" data-tab="1").contacts__tab.active Відділення у Лодзі
+                  a(href="javascript:void(0)" data-tab="2").contacts__tab Відділення у Ризі
+                  a(href="javascript:void(0)" data-tab="3").contacts__tab Відділення в Кембриджі
+                  a(href="javascript:void(0)" data-tab="4").contacts__tab Вдділення у Київ
+                .contacts__tab-content
+                  .contacts__tab-content-item(data-tab-content="1").active
+                    .contacts__info
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/address.svg
+                        .contacts__info-txt
+                          .contacts__info-name Адрес
+                          .contacts__info-desc Київ 02000Оноре Де Бальзака, 4А. Відділення Нової пошти №295
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/phone.svg
+                        .contacts__info-txt
+                          .contacts__info-name Телефон:
+                          .contacts__info-desc
+                            a(href="tel:+380982519280") +380-98-251-92-80
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/email.svg
+                        .contacts__info-txt
+                          .contacts__info-name E-mail:
+                          .contacts__info-desc
+                            a(href="mailto:support@expresposhta.com") support@expresposhta.com
+                    .contacts__map
+                      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.8753214100475!2d30.575212415733265!3d50.49927817948218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1b9e04cf849%3A0x36805c2d4b31a4a8!2z0J3QvtCy0LAg0J_QvtGI0YLQsC4g0J_QvtGI0YLQvtCy0LUg0LLRltC00LTRltC70LXQvdC90Y8g4oSWMjk1LiDQmtC40ZfQsiwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0Ls!5e0!3m2!1sru!2sua!4v1684155739067!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+
+                  .contacts__tab-content-item(data-tab-content="2")
+                    .contacts__info
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/address.svg
+                        .contacts__info-txt
+                          .contacts__info-name Адрес
+                          .contacts__info-desc Київ 02000Оноре Де Бальзака, 4А. Відділення Нової пошти №295
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/phone.svg
+                        .contacts__info-txt
+                          .contacts__info-name Телефон:
+                          .contacts__info-desc
+                            a(href="tel:+380982519280") +32423
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/email.svg
+                        .contacts__info-txt
+                          .contacts__info-name E-mail:
+                          .contacts__info-desc
+                            a(href="mailto:support@expresposhta.com") 23432@expresposhta.com
+                    .contacts__map
+                      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.8753214100475!2d30.575212415733265!3d50.49927817948218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1b9e04cf849%3A0x36805c2d4b31a4a8!2z0J3QvtCy0LAg0J_QvtGI0YLQsC4g0J_QvtGI0YLQvtCy0LUg0LLRltC00LTRltC70LXQvdC90Y8g4oSWMjk1LiDQmtC40ZfQsiwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0Ls!5e0!3m2!1sru!2sua!4v1684155739067!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+
+                  .contacts__tab-content-item(data-tab-content="3")
+                    .contacts__info
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/address.svg
+                        .contacts__info-txt
+                          .contacts__info-name Адрес
+                          .contacts__info-desc Київ 02000Оноре Де Бальзака, 4А. Відділення Нової пошти №295
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/phone.svg
+                        .contacts__info-txt
+                          .contacts__info-name Телефон:
+                          .contacts__info-desc
+                            a(href="tel:+380982519280") +432423
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/email.svg
+                        .contacts__info-txt
+                          .contacts__info-name E-mail:
+                          .contacts__info-desc
+                            a(href="mailto:support@expresposhta.com") 2343242@expresposhta.com
+                    .contacts__map
+                      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.8753214100475!2d30.575212415733265!3d50.49927817948218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1b9e04cf849%3A0x36805c2d4b31a4a8!2z0J3QvtCy0LAg0J_QvtGI0YLQsC4g0J_QvtGI0YLQvtCy0LUg0LLRltC00LTRltC70LXQvdC90Y8g4oSWMjk1LiDQmtC40ZfQsiwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0Ls!5e0!3m2!1sru!2sua!4v1684155739067!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+
+                  .contacts__tab-content-item(data-tab-content="4")
+                    .contacts__info
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/address.svg
+                        .contacts__info-txt
+                          .contacts__info-name Адрес
+                          .contacts__info-desc Київ 02000Оноре Де Бальзака, 4А. Відділення Нової пошти №295
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/phone.svg
+                        .contacts__info-txt
+                          .contacts__info-name Телефон:
+                          .contacts__info-desc
+                            a(href="tel:+380982519280") +234234
+                      .contacts__info-item
+                        .contacts__info-ico
+                          include ../img/contacts/email.svg
+                        .contacts__info-txt
+                          .contacts__info-name E-mail:
+                          .contacts__info-desc
+                            a(href="mailto:support@expresposhta.com") 242342@expresposhta.com
+                    .contacts__map
+                      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.8753214100475!2d30.575212415733265!3d50.49927817948218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1b9e04cf849%3A0x36805c2d4b31a4a8!2z0J3QvtCy0LAg0J_QvtGI0YLQsC4g0J_QvtGI0YLQvtCy0LUg0LLRltC00LTRltC70LXQvdC90Y8g4oSWMjk1LiDQmtC40ZfQsiwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0Ls!5e0!3m2!1sru!2sua!4v1684155739067!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+
+            .contacts__right
+              .contacts__form
+                .contacts__form-title Виникли запитання?
+                  span Зв’яжіться з нами!
+                .contacts__form-input
+                  input(placeholder='Ім’я')
+                .contacts__form-input
+                  input(placeholder='E-mail')
+                .contacts__form-textarea
+                  textarea(placeholder='Текст')
+                .contacts__form-btn
+                  a(href="#").site-btn Відправити
+
+
+        
+    
