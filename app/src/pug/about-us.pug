@@ -1,0 +1,112 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Search2";
+  - var pageClass = "search2";
+  - var pageActive = "search2";
+
+block content
+  div.main-wrap
+    .section-who-we.section-about-us
+      .container
+        .who-we
+          .who-we__inner
+            .site-title
+              .site-title-txt
+                | Про&nbsp;
+                span нас
+
+            .who-we__txt-block
+              .who-we__txt
+                p <b>Компанія Express Poshta</b> розпочала свою роботу в Україні у 2017 році. За цей час ми змогли завоювати довіру бізнес-клієнтів, інтернет-магазинів та всіх, хто шукає альтернативу Укрпошті або дорогим відправкам стандартних експрес служб. Перевага Експрес Пошти полягає в якісній логістиці, контрактах з великими перевізниками та наявності складів як в Україні, так і в США.
+                p Наші економ доставки набагато дешевші, ніж прямі експреси інших компаній, і в той же час вони майже не поступаються в термінах надходження. Такі ціни надаються нашим клієнтам шляхом консолідації відправок, умови якої особливо підходять для невеликих посилок вагою до 1.5 кг. Це ідеальні відправки для тих, хто продає в інтернет-магазинах або відправляє подарунок своїм близьким за кордон.
+                p Ми також надаємо можливість безперервно відстежувати посилки на сайті (від приймання вантажу на складі в Києві до його надходження в руки отримувача).
+                p Для тих, кому важлива швидкість, ми пропонуємо експрес доставки до 20 кг, ціни на які є найнижчими в Україні. Тому якщо Вам необхідно вислати бізнес документи або невелику партію товарів – наші ціни приємно Вас здивують.
+                p Для власників магазинів на Amazon, eBay або Etsy ми пропонуємо послуги складу в США, що включають зберігання товару та його своєчасну відправку клієнтам при надходженні замовлень. Просто напишіть нам на пошту або зателефонуйте по номеру, що вказаний на сайті, і ми неодмінно підключимо Вас до онлайн системи складу.
+
+    .section-reviews
+      .container
+        .reviews
+          .reviews__inner
+            .site-title.site-title--small
+              .site-title-txt
+                | Відгуки наших <br>
+                span кліентів
+
+              .review-slider__nav
+                .review-slider__nav-prev
+                  include ../img/about-us/arrow-slider.svg
+                .review-slider__nav-next
+                  include ../img/about-us/arrow-slider.svg
+
+            .reviews__slider
+              .reviews__slider-block.review-slider
+                .swiper-wrapper
+                  .swiper-slide
+                    .reviews__slider-item
+                      .reviews__slider-top
+                        .reviews__slider-logo
+                          img(class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/about-us/photo1.png" alt="product 2")
+                        .reviews__slider-info
+                          .reviews__slider-name Susana W.
+                          .reviews__slider-date 12.03.2023
+                      .reviews__slider-desc Отзыв клиента о том, как ему понравилось работать с компанией. Желательно добавлять реальные отзывы. Клиентом может быть компания (тогда слева ставим логотип) или человек (тогда - фото)
+                  .swiper-slide
+                    .reviews__slider-item
+                      .reviews__slider-top
+                        .reviews__slider-logo
+                          img(class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/about-us/photo1.png" alt="product 2")
+                        .reviews__slider-info
+                          .reviews__slider-name Susana W.
+                          .reviews__slider-date 12.03.2023
+                      .reviews__slider-desc Отзыв клиента о том, как ему понравилось работать с компанией. Желательно добавлять реальные отзывы. Клиентом может быть компания (тогда слева ставим логотип) или человек (тогда - фото)
+                  .swiper-slide
+                    .reviews__slider-item
+                      .reviews__slider-top
+                        .reviews__slider-logo
+                          img(class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/about-us/photo2.png" alt="product 2")
+                        .reviews__slider-info
+                          .reviews__slider-name Susana W.
+                          .reviews__slider-date 12.03.2023
+                      .reviews__slider-desc Отзыв клиента о том, как ему понравилось работать с компанией. Желательно добавлять реальные отзывы. Клиентом может быть компания (тогда слева ставим логотип) или человек (тогда - фото)
+                  .swiper-slide
+                    .reviews__slider-item
+                      .reviews__slider-top
+                        .reviews__slider-logo
+                          img(class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/about-us/photo2.png" alt="product 2")
+                        .reviews__slider-info
+                          .reviews__slider-name Susana W.
+                          .reviews__slider-date 12.03.2023
+                      .reviews__slider-desc Отзыв клиента о том, как ему понравилось работать с компанией. Желательно добавлять реальные отзывы. Клиентом может быть компания (тогда слева ставим логотип) или человек (тогда - фото)
+
+
+    .section-review-form
+      .container
+        .review-form
+          .review-form__inner
+            .review-form-title.site-title.site-title--small
+              .site-title-txt
+                | Залишити <br>
+                span відгук
+
+            .review-form__right
+              .review-form__right-inner
+                .review-form__item.review-form__item--small
+                  label.review-form__label(for='name') Ваше ім’я
+                  input(placeholder='Ім’я' id='name').review-form__input
+                .review-form__item.review-form__item--small
+                  label.review-form__label(for='email') Ваш e-mail
+                  input(placeholder='E-mail' id='email').review-form__input
+                .review-form__item
+                  label.review-form__label(for='review') Ваш відгук
+                  textarea(placeholder='Текст вашого відгуку' id='review').review-form__textarea
+                .review-form__item.review-form__item--bottom
+                  .review-form__bottom-left
+                    .review-form__file-block
+                      label.review-form__label(for='file-btn') Додати фото
+                        input(type='file' id='file-btn').review-form__file
+                        span.review-form__file-btn Вибрати файл
+                        span(id='image-name')
+                      span Зображення має бути не більше 5 Мб
+                  .review-form__bottom-right
+                    a(href="javascript:void(0)").site-btn Відправити

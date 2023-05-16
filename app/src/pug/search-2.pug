@@ -1,0 +1,29 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Search2";
+  - var pageClass = "search2";
+  - var pageActive = "search2";
+
+block content
+  div.main-wrap
+    .section-search
+      .container
+        .site-title
+          h1.site-title-txt.main-title
+            | Результат пошуку: &nbsp;
+            span 234234234234
+
+        .search-table
+          table.search-table__table
+            thead
+              tr
+                td Дата
+                td Статус
+                td Детальніше
+            tbody
+              tr
+                td(colspan='3' style='text-align: center; padding: 35px;') Нічого не знайдено
+
+        
+    

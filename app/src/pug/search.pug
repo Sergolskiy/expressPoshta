@@ -1,0 +1,53 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Search";
+  - var pageClass = "search";
+  - var pageActive = "search";
+
+block content
+  div.main-wrap
+    .section-search
+      .container
+        .site-title
+          h1.site-title-txt.main-title
+            | Результат пошуку: &nbsp;
+            span 234234234234
+
+        .search-table
+          table.search-table__table
+            thead
+              tr
+                td Дата
+                td Статус
+                td Детальніше
+            tbody
+              tr
+                td 23 cічня 2023
+                td
+                  span.status-delivered Доставлено
+                td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              tr
+                td 23 cічня 2023
+                td
+                  span.status-in-transit В дорозі
+                td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              tr
+                td 23 cічня 2023
+                td
+                  span.status-no-info Немає інформації
+                td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              tr
+                td 23 cічня 2023
+                td
+                  span.status-returned Повернуто
+                td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              tr
+                td 23 cічня 2023
+                td
+                  span.status-warning Попередження
+                td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+        
+    

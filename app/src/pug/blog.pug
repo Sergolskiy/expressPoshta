@@ -1,0 +1,69 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Blog";
+  - var pageClass = "blog";
+  - var pageActive = "blog";
+
+block content
+  div.main-wrap
+    .section-blog
+      .container
+        .site-title
+          h1.site-title-txt.main-title
+            span Блог
+
+        .blog-list
+          .blog-list__items
+            .blog-list__item
+              .blog-list__left
+                img(class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/blog/blog1.jpg" alt="img")
+              .blog-list__right
+                .blog-list__date 25.02.2023
+                .blog-list__title eBay запускає нову програму доставки за підтримки Easyship
+                .blog-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                a(href="#").blog-list__btn
+                  include ../img/blog/blog-btn-arr.svg
+            .blog-list__item
+              .blog-list__left
+                img(class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/blog/blog1.jpg" alt="img")
+              .blog-list__right
+                .blog-list__date 25.02.2023
+                .blog-list__title eBay запускає нову програму доставки за підтримки Easyship
+                .blog-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                a(href="#").blog-list__btn
+                  include ../img/blog/blog-btn-arr.svg
+            .blog-list__item
+              .blog-list__left
+                img(class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/blog/blog2.jpg" alt="img")
+              .blog-list__right
+                .blog-list__date 25.02.2023
+                .blog-list__title eBay запускає нову програму доставки за підтримки Easyship
+                .blog-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                a(href="#").blog-list__btn
+                  include ../img/blog/blog-btn-arr.svg
+            .blog-list__item
+              .blog-list__left
+                img(class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/blog/blog3.jpg" alt="img")
+              .blog-list__right
+                .blog-list__date 25.02.2023
+                .blog-list__title eBay запускає нову програму доставки за підтримки Easyship
+                .blog-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                a(href="#").blog-list__btn
+                  include ../img/blog/blog-btn-arr.svg
+            .blog-list__item
+              .blog-list__left
+                img(class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="./img/blog/blog4.jpg" alt="img")
+              .blog-list__right
+                .blog-list__date 25.02.2023
+                .blog-list__title eBay запускає нову програму доставки за підтримки Easyship
+                .blog-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                a(href="#").blog-list__btn
+                  include ../img/blog/blog-btn-arr.svg
+
+          .blog-list__show-more
+            a(href="#").btn-show-more Показать еще
+              include ../img/blog/show-more.svg
+
+        
+    
