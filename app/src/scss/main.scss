@@ -1912,12 +1912,28 @@
 
 
 .section-search {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 774px;
+    height: 827px;
+    right: -150px;
+    top: 250px;
+    background: #ffd250;
+    filter: blur(250px);
+    opacity: .2;
+  }
+
   .main-title {
     letter-spacing: 0;
   }
 }
 
 .search-table {
+  position: relative;
+  z-index: 2;
 
   table, th, td {
     border: 0;
@@ -2010,7 +2026,29 @@
 }
 
 
+.about-us,
+.blog {
+  .page__content {
+    position: relative;
 
+    &::after {
+      content: '';
+      position: absolute;
+      width: 774px;
+      height: 827px;
+      right: -150px;
+      bottom: -250px;
+      background: #ffd250;
+      filter: blur(250px);
+      opacity: .2;
+    }
+  }
+
+  .main-wrap {
+    position: relative;
+    z-index: 2;
+  }
+}
 
 .section-about-us {
   margin-top: 0;
@@ -2318,11 +2356,16 @@
 
 }
 
+.section-blog {
+  .site-title-txt.main-title span {
+    text-transform: initial;
+  }
+}
 
 .blog-list {
 
   &__items {
-    margin-top: 40px;
+    margin-top: 35px;
     border-bottom: 1px solid #dcdde5;
   }
 
@@ -2339,7 +2382,7 @@
 
   &__right {
     padding-left: 20px;
-    padding-top: 35px;
+    padding-top: 32px;
   }
 
   &__date {
@@ -2354,7 +2397,7 @@
     font-size: 18px;
     line-height: 25px;
     color: #292B4F;
-    margin-top: 8px;
+    margin-top: 6px;
   }
 
   &__desc {
@@ -2362,11 +2405,11 @@
     font-size: 16px;
     line-height: 25px;
     color: #292B4F;
-    margin-top: 6px;
+    margin-top: 7px;
   }
 
   &__btn {
-    margin-top: 30px;
+    margin-top: 33px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -2374,6 +2417,10 @@
     height: 50px;
     background: #E6EEFF;
     border-radius: 90px;
+
+    svg {
+      margin-left: 3px;
+    }
   }
 
   &__show-more {
