@@ -61,6 +61,24 @@
       letter-spacing: 0;
     }
   }
+
+  &--right-caption {
+    display: flex;
+    justify-content: space-between;
+
+    .site-title-caption {
+      max-width: 960px;
+      margin-top: 0;
+    }
+  }
+}
+
+.site-sub-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
+  color: #292B4F;
+  margin-top: 30px;
 }
 
 .site-title-txt {
@@ -121,6 +139,7 @@
   }
 }
 
+.calculator-page .page__wrapper,
 .homepage .page__wrapper{
   background: #F4F6FE url('../img/home/top_bg.svg') right -50px no-repeat;
 }
@@ -130,16 +149,8 @@
   background: #F4F6FE;
 }
 
-.homepage .main-wrap {
-  @include for-550 {
-    display: flex;
-    flex-direction: column;
-
-    //.section-who-we {
-    //  order: 20;
-    //}
-  }
-
+.calculator-page,
+.homepage {
   .header {
     &:before {
       content: '';
@@ -153,6 +164,7 @@
       filter: blur(100px);
     }
   }
+
 }
 
 
@@ -1552,6 +1564,10 @@
     padding: 30px 30px 18px;
     border-radius: 10px;
     height: 100%;
+
+    @include for-550 {
+      min-height: 205px;
+    }
   }
 
   &__top {
@@ -2027,6 +2043,9 @@
 
 
 .about-us,
+.tariffs-page,
+.delivery-terms,
+.calculator-page,
 .blog {
   .page__content {
     position: relative;
@@ -2340,7 +2359,7 @@
     cursor: pointer;
     margin-left: 15px;
   }
-  
+
   #image-name {
     color: #000;
     font-weight: bold;
@@ -2450,6 +2469,173 @@
     }
   }
 }
+
+
+.section-tariffs {
+
+}
+
+.tariffs {
+  margin-top: 50px;
+
+  &__inner {
+
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: 524px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 70px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 0 0 #eaf0fc;
+    padding: 20px;
+
+    &--text {
+      background: transparent;
+      padding: 0;
+      box-shadow: initial;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: #292B4F;
+
+      p {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__item-top {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dcdde5;
+  }
+
+  &__item-flag {
+
+  }
+
+  &__item-name {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #292B4F;
+    margin-left: 20px;
+  }
+
+  &__item-from {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    margin-left: auto;
+  }
+
+  &__item-content {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #292B4F;
+  }
+
+  &__item-title {
+    font-weight: 700;
+  }
+
+  &__item-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item-tariff {
+    font-weight: 400;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+
+    .site-btn {
+      padding: 24px 79px;
+    }
+  }
+
+}
+
+.section-tariffs-calculator {
+  margin-top: 85px;
+}
+
+.section-how-send-tariffs {
+  .how-send {
+    margin-top: 90px;
+  }
+}
+
+.section-delivery-terms {
+  position: relative;
+  z-index: 2;
+
+  .site-title-txt.main-title {
+    letter-spacing: 0;
+    span {
+      text-transform: initial;
+    }
+  }
+
+  .site-title-caption {
+    max-width: 835px;
+  }
+}
+
+.section-delivery-terms-list {
+  .delivery__items {
+    margin-top: 0;
+  }
+
+  .delivery__item {
+    width: 25%;
+  }
+}
+
+.section-delivery-terms-form {
+  .site-sub-title {
+    min-width: 405px;
+  }
+}
+
+.section-calculator-page {
+  .site-title-txt.main-title span {
+    text-transform: initial;
+  }
+}
+
+.section-calculator-page-form {
+  .review-form__inner {
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+}
+
+
+
+
 
 
 

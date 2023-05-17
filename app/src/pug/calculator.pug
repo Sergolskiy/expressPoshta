@@ -1,0 +1,97 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Calculator-page";
+  - var pageClass = "calculator-page";
+  - var pageActive = "calculator-page";
+
+block content
+  div.main-wrap
+    .section-calculator-page.lazyload
+      .container
+        .site-title
+          h1.site-title-txt.main-title
+            | Розрахувати своє&nbsp;
+            span відправлення
+
+        .calculator-block
+          .calculator-block__inner
+            .calculator-block__items
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-sm-12
+                .calculator-block__name Відправити звідки...
+                .calculator-block__select
+                  select.form-select
+                    option(value='Велікобританія') Велікобританія
+                    option(value='Україна') Україна
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-sm-12
+                .calculator-block__name Доставити куди...
+                .calculator-block__select
+                  select.form-select
+                    option(value='Оберіть') Оберіть
+                    option(value='Україна') Україна
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-sm-12
+                .calculator-block__select-wrap.calculator-block__select-wrap--column.dimensions
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Вага
+                    .calculator-block__input
+                      input(type='text')
+                      span кг
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Довжина
+                    .calculator-block__input
+                      input(type='text')
+                      span см
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Ширина
+                    .calculator-block__input
+                      input(type='text')
+                      span см
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Висота
+                    .calculator-block__input
+                      input(type='text')
+                      span см
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-md-7.calculator-block__item--col-sm-12
+                .calculator-block__name Індекс
+                  a(href='#').calculator-block__name--quest Потрібна допомога?
+                    include ../img/home/help.svg
+                .calculator-block__select-wrap
+                  .calculator-block__select-item.calculator-block__select-item--col-8.calculator-block__select-item--col-sm-12
+                    .calculator-block__input
+                      input(type='text' placeholder='Наприклад: 10001')
+                  .calculator-block__select-item.calculator-block__select-item--col-4.calculator-block__select-item--col-sm-12
+                    a(href="#").site-btn Розрахувати
+            .calculator-block__footer
+              .calculator-block__footer__left
+                .calculator-block__footer-totals
+                  .calculator-block__footer-total Стандартна доставка:
+                    span $5
+                  .calculator-block__footer-total Експрес:
+                    span $10
+
+
+
+    .section-calculator-page-form
+      .container
+        .review-form
+          .review-form__inner
+            .review-form-title.site-title.site-title--small
+              .site-title-txt
+                | Залишились <br>
+                span питання?
+              .site-sub-title Зв’яжіться з нами!
+
+            .review-form__right
+              .review-form__right-inner
+                .review-form__item.review-form__item--small
+                  label.review-form__label(for='name') Ваше ім’я
+                  input(placeholder='Ім’я' id='name').review-form__input
+                .review-form__item.review-form__item--small
+                  label.review-form__label(for='email') Ваш e-mail
+                  input(placeholder='E-mail' id='email').review-form__input
+                .review-form__item
+                  label.review-form__label(for='review') Ваш відгук
+                  textarea(placeholder='Текст питання' id='review').review-form__textarea
+                .review-form__item.review-form__item--bottom
+                  .review-form__bottom-right
+                    a(href="javascript:void(0)").site-btn Відправити

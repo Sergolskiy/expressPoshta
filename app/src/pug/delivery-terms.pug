@@ -1,0 +1,186 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Delivery-terms";
+  - var pageClass = "delivery-terms";
+  - var pageActive = "delivery-terms";
+
+block content
+  div.main-wrap
+    .section-delivery-terms
+      .container
+        .site-title.site-title--right-caption
+          h1.site-title-txt.main-title
+            span Терміни
+            | нашої доставки
+          .site-title-caption На цій сторінці ви можете переглянути терміни доставки та митну інформацію(натиснувши на назву країни).
+
+    .section-delivery-terms-list.lazyload
+      .container
+        .delivery
+          .delivery__inner
+            .delivery__items
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/usa.svg
+                  .delivery__item-top
+                    include ../img/home/flag_usa.svg
+                    | США
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 4 - 5 днів
+                    .delivery__item-right
+                      .delivery__item-name Економ доставка
+                      .delivery__item-txt 6 - 10 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/canada.svg
+                  .delivery__item-top
+                    include ../img/home/flag_kanada.svg
+                    | Канада
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 7 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/australia.svg
+                  .delivery__item-top
+                    include ../img/home/flag_australia.svg
+                    | Австралія
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 4 - 5 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/poland.svg
+                  .delivery__item-top
+                    include ../img/home/flag_poland.svg
+                    | Польша
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 4 - 8 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/italy.svg
+                  .delivery__item-top
+                    include ../img/home/flag_italy.svg
+                    | Італія
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 3 - 6 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/gb.svg
+                  .delivery__item-top
+                    include ../img/home/flag_gb.svg
+                    | Великобретанія
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 2 - 6 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/germany.svg
+                  .delivery__item-top
+                    include ../img/home/flag_germany.svg
+                    | Німетчина
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 3 - 6 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/spain.svg
+                  .delivery__item-top
+                    include ../img/home/flag_spain.svg
+                    | Іспанія
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 3 - 7 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/greece.svg
+                  .delivery__item-top
+                    include ../img/home/flag_greece.svg
+                    | Греція
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 4 - 9 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/mexico.svg
+                  .delivery__item-top
+                    include ../img/home/flag_greece.svg
+                    | Мексика
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt 4 - 7 днів
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/eu.svg
+                  .delivery__item-top
+                    include ../img/home/flag_greece.svg
+                    | Країни Євросоюзу
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt -
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/south-america.svg
+                  .delivery__item-top
+                    include ../img/home/flag-eu.svg
+                    | Південна Америка
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt -
+              .delivery__item
+                .delivery__item-inner
+                  include ../img/home/country/africa.svg
+                  .delivery__item-top
+                    | Країни Африки
+                  .delivery__item-bottom
+                    .delivery__item-left
+                      .delivery__item-name Експрес доставка
+                      .delivery__item-txt -
+
+
+
+    .section-delivery-terms-form
+      .container
+        .review-form
+          .review-form__inner
+            .review-form-title.site-title.site-title--small
+              .site-title-txt
+                | Залишились <br>
+                span питання?
+              .site-sub-title Зв’яжіться з нами!
+
+            .review-form__right
+              .review-form__right-inner
+                .review-form__item.review-form__item--small
+                  label.review-form__label(for='name') Ваше ім’я
+                  input(placeholder='Ім’я' id='name').review-form__input
+                .review-form__item.review-form__item--small
+                  label.review-form__label(for='email') Ваш e-mail
+                  input(placeholder='E-mail' id='email').review-form__input
+                .review-form__item
+                  label.review-form__label(for='review') Ваш відгук
+                  textarea(placeholder='Текст питання' id='review').review-form__textarea
+                .review-form__item.review-form__item--bottom
+                  .review-form__bottom-right
+                    a(href="javascript:void(0)").site-btn Відправити
+
+
+
+        
+    

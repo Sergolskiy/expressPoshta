@@ -1,0 +1,209 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Tariffs";
+  - var pageClass = "tariffs-page";
+  - var pageActive = "tariffs-page";
+
+block content
+  div.main-wrap
+    .section-tariffs
+      .container
+        .site-title.site-title--right-caption
+          h1.site-title-txt.main-title
+            span Тарифи
+            | на відправку
+          .site-title-caption Ви завжди можете обрат той вид доставки за кордон, який найбільше підходить саме вам. Все залежить від того наскільки швидко необхідно доставити, який бюджет на доставку та яка вага посилки.
+
+
+        .tariffs
+          .tariffs__inner
+            .tariffs__items
+              .tariffs__item
+                .tariffs__item-top
+                  .tariffs__item-flag
+                    include ../img/tariffs/flag-usa.svg
+                  .tariffs__item-name Економ по США
+                  .tariffs__item-from Тільки США
+                .tariffs__item-content
+                  .tariffs__item-title Терміни доставки 5-7 днів [Економ]
+                  .tariffs__item-list
+                    .tariffs__item-tariff до 114 гр – 9.5$
+                    .tariffs__item-tariff до 1 021 гр – 25.5$
+                    .tariffs__item-tariff до 227 гр – 11.5$
+                    .tariffs__item-tariff до 1502 гр – 33$
+                    .tariffs__item-tariff до 312 гр – 13$
+                    .tariffs__item-tariff до 2 012 гр – 38.5$
+                    .tariffs__item-tariff до 454 гр – 16.5$
+
+              .tariffs__item
+                .tariffs__item-top
+                  .tariffs__item-flag
+                    include ../img/tariffs/flag-usa.svg
+                  .tariffs__item-name Експрес в США
+                .tariffs__item-content
+                  .tariffs__item-title Термін доставки 2-3 дні [Експрес-Стандарт]
+                  .tariffs__item-list
+                    .tariffs__item-tariff 1 кг – 28.62$
+                    .tariffs__item-tariff 5 кг – 53.35$
+                    .tariffs__item-tariff 2 кг – 36.64$
+                    .tariffs__item-tariff 10 кг – 75.39$
+                    .tariffs__item-tariff 3 кг – 43.99$
+                    .tariffs__item-tariff 20 кг – 113.81$
+
+              .tariffs__item
+                .tariffs__item-top
+                  .tariffs__item-flag
+                    include ../img/tariffs/flag-canada.svg
+                  .tariffs__item-name Експрес в Канаду
+                .tariffs__item-content
+                  .tariffs__item-title Термін доставки 2-4 дні [Експрес-Стандарт]
+                  .tariffs__item-list
+                    .tariffs__item-tariff 1 кг – 28.62$
+                    .tariffs__item-tariff 5 кг – 53.35$
+                    .tariffs__item-tariff 2 кг – 36.64$
+                    .tariffs__item-tariff 10 кг – 75.39$
+                    .tariffs__item-tariff 3 кг – 43.99$
+                    .tariffs__item-tariff 20 кг – 113.81$
+
+              .tariffs__item
+                .tariffs__item-top
+                  .tariffs__item-flag
+                    include ../img/tariffs/flag-eu.svg
+                  .tariffs__item-name Експрес в Європу
+                .tariffs__item-content
+                  .tariffs__item-title Термін доставки 1-2 дні [Експрес-Стандарт]
+                  .tariffs__item-list
+                    .tariffs__item-tariff 1 кг – 30.50$
+                    .tariffs__item-tariff 5 кг – 52.58$
+                    .tariffs__item-tariff 2 кг – 37.70$
+                    .tariffs__item-tariff 10 кг – 72.14$
+                    .tariffs__item-tariff 3 кг – 43.56$
+                    .tariffs__item-tariff 20 кг – 96.14$
+
+              .tariffs__item
+                .tariffs__item-top
+                  .tariffs__item-flag
+                    include ../img/tariffs/flag-eu.svg
+                  .tariffs__item-name Економ-Експрес в Європу
+                .tariffs__item-content
+                  .tariffs__item-title Термін доставки 3-5 днів [Економ-Експрес]
+                  .tariffs__item-list
+                    .tariffs__item-tariff 0.5 кг – 22.25$
+                    .tariffs__item-tariff 2.5 кг – 35.91$
+                    .tariffs__item-tariff 1 кг – 25.66$
+                    .tariffs__item-tariff 3 кг – 39$
+                    .tariffs__item-tariff 1.5 кг – 28.74$
+                    .tariffs__item-tariff 3.5 кг – 42.08$
+                    .tariffs__item-tariff 2 кг – 31.83$
+                    .tariffs__item-tariff 5 кг – 51.43$
+
+              .tariffs__item.tariffs__item--text
+                .tariffs__item-desc
+                  p *Для розрахунку вартості доставки приймається більше значення фактичної або об’ємної ваги.
+                  p При розрахунку тарифу вага відправлення округлюється до найближчого значення в більшу сторону.
+                  p <b>Економ посилки</b> – крок округлення 100 гр
+                  p <b>Експрес посилки</b> – крок округлення 1 кг
+                  p Формула розрахунку об’ємної ваги: Довжина х Ширина х Висота (см) / 5 000
+
+            .tariffs__btn
+              a(href="#").site-btn Відправити
+
+    .section-tariffs-calculator
+      .container
+        .site-title
+          h1.site-title-txt
+            | Розрахувати своє
+            span відправлення
+
+        .calculator-block
+          .calculator-block__inner
+            .calculator-block__items
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-sm-12
+                .calculator-block__name Відправити звідки...
+                .calculator-block__select
+                  select.form-select
+                    option(value='Велікобританія') Велікобританія
+                    option(value='Україна') Україна
+
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-sm-12
+                .calculator-block__name Доставити куди...
+                .calculator-block__select
+                  select.form-select
+                    option(value='Оберіть') Оберіть
+                    option(value='Україна') Україна
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-sm-12
+                .calculator-block__select-wrap.calculator-block__select-wrap--column.dimensions
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Вага
+                    .calculator-block__input
+                      input(type='text')
+                      span кг
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Довжина
+                    .calculator-block__input
+                      input(type='text')
+                      span см
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Ширина
+                    .calculator-block__input
+                      input(type='text')
+                      span см
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Висота
+                    .calculator-block__input
+                      input(type='text')
+                      span см
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-md-7.calculator-block__item--col-sm-12
+                .calculator-block__name Індекс
+                  a(href='#').calculator-block__name--quest Потрібна допомога?
+                    include ../img/home/help.svg
+                .calculator-block__select-wrap
+                  .calculator-block__select-item.calculator-block__select-item--col-8.calculator-block__select-item--col-sm-12
+                    .calculator-block__input
+                      input(type='text' placeholder='Наприклад: 10001')
+                  .calculator-block__select-item.calculator-block__select-item--col-4.calculator-block__select-item--col-sm-12
+                    a(href="#").site-btn Розрахувати
+
+
+            .calculator-block__footer
+              .calculator-block__footer__left
+                .calculator-block__footer-totals
+                  .calculator-block__footer-total Стандартна доставка:
+                    span $5
+                  .calculator-block__footer-total Експрес:
+                    span $10
+
+
+    .section-how-send-tariffs
+      .container
+        .how-send
+          .how-send__inner
+            .site-title
+              .site-title-txt
+                | Як&nbsp;
+                span відправити посилку
+
+            .how-send__items
+              .how-send__item
+                .how-send__img
+                  include ../img/home/how-send/send_1.svg
+                .how-send__txt(data-num='01') Зареєструватисяна сайті
+              .how-send__item
+                .how-send__img
+                  include ../img/home/how-send/send_2.svg
+                .how-send__txt(data-num='02') Обрати напрямокта тип доставки
+              .how-send__item
+                .how-send__img
+                  include ../img/home/how-send/send_3.svg
+                .how-send__txt(data-num='03') Надіслати нам пакунок
+              .how-send__item
+                .how-send__img
+                  include ../img/home/how-send/send_4.svg
+                .how-send__txt(data-num='04') Чекати надоставку
+
+
+
+
+        
+    
