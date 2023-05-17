@@ -2617,6 +2617,10 @@
   .site-sub-title {
     min-width: 405px;
   }
+
+  .review-form {
+    background: url('../img/delivery-terms/plane-form.svg') 20px center no-repeat;
+  }
 }
 
 .section-calculator-page {
@@ -2626,6 +2630,8 @@
 }
 
 .section-calculator-page-form {
+  background: url('../img/delivery-terms/plane-form.svg') 30px bottom no-repeat;
+
   .review-form__inner {
     padding: 0;
     background: transparent;
