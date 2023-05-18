@@ -121,6 +121,8 @@ function initFileBtn() {
     let input = document.getElementById("file-btn");
     let imageName = document.getElementById("image-name")
 
+    if(!input) return
+
     input.addEventListener("change", () => {
         let inputImage = document.querySelector("input[type=file]").files[0];
 
@@ -161,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.review-slider')) {
         const swiperCombo = new Swiper('.review-slider ', {
             loop: false,
-            slidesPerView: 3,
+            // slidesPerView: 3,
             spaceBetween: 30,
             navigation: {
                 nextEl: '.review-slider__nav-next',
@@ -176,10 +178,13 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             // Responsive breakpoints
             breakpoints: {
-                300: {
-                    slidesPerView: 'auto',
+                // 300: {
+                //     slidesPerView: 'auto',
+                // },
+                550: {
+                    slidesPerView: 2,
                 },
-                1410: {
+                1100: {
                     slidesPerView: 3,
                 },
 

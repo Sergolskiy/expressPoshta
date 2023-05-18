@@ -1,0 +1,25 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Not-found";
+  - var pageClass = "not-found-page";
+  - var pageActive = "not-found";
+
+block content
+  div.main-wrap
+    .section-not-found
+      .container
+        .not-found
+          .not-found__txt 404
+          .not-found__subtitle
+            span Ой...
+            | Ми не можемо знайти цю сторінку!
+          .not-found__desc
+            p Ми шкодуємо, але сторінка, на яку Ви намагалися перейти, не існує.
+            p Будь ласка, поверніться на попередню сторінку або скористайтеся меню.
+          .not-found__btn
+            a(href="#").site-btn На головну
+
+
+        
+    

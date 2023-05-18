@@ -11,7 +11,7 @@ block content
       .container
         .site-title
           h1.site-title-txt.main-title
-            | Результат пошуку: &nbsp;
+            | Результат пошуку:
             span 234234234234
 
         .search-table
@@ -23,7 +23,10 @@ block content
                 td Детальніше
             tbody
               tr
-                td(colspan='3' style='text-align: center; padding: 35px;') Нічого не знайдено
+                td(colspan='3').search-table__not-found Нічого не знайдено
+
+        .search-mobile
+          .search-mobile__not-found Нічого не знайдено
 
         
     
