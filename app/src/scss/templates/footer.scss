@@ -129,6 +129,12 @@
     &:hover {
       color: #1E90FF;
     }
+
+    &--no-link {
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
   }
 
 

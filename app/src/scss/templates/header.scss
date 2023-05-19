@@ -25,6 +25,8 @@
 
     @include for-992 {
       height: 65px;
+      position: absolute;
+      z-index: 10;
     }
 
     @include for-1600 {
@@ -43,6 +45,11 @@
 
   &__column {
     width: 100%;
+
+    @include for-992 {
+      position: relative;
+      padding-left: 112px;
+    }
   }
 
   &__top {
@@ -341,7 +348,8 @@
     }
 
     @include for-992 {
-      margin-left: -115px;
+      //margin-left: -115px;
+      height: 70px;
     }
 
     & > .site-btn {
@@ -374,6 +382,10 @@
 
     @include for-992 {
       max-width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: calc(100vw - 30px);
     }
   }
 
