@@ -1,0 +1,101 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "country-usa";
+  - var pageClass = "country-page country-page--is";
+  - var pageActive = "country-usa";
+
+block content
+  div.main-wrap
+    .section-country
+      .container
+        .site-title
+          h1.site-title-txt.main-title
+            | Країна
+            span Іспанія
+
+        .country
+          .country__inner
+            .country__left
+              .country__txt
+                p Іспанія є членом європейського союзу, при відправленні з країн учасників союзу посилки не обкладаються будь-якими податками і зборами. Метод оцінки CIF (вартість + страхування + доставка).
+                p <b>Мито:</b> від 0 до 17%. Деякі товари не підлягають обкладенню митними зборами (наприклад книги). Податок з продажів: 21% від суми CIF.
+                p <b>Поріг для безмитного ввезення:</b> посилки зі значенням FOB (декларована вартість, без урахування доставки і страхування) до 22EUR (≈23.4USD) не обкладаються ні митом, ні податком з продажів. Посилки зі значенням FOB до 150EUR (≈159.5USD) не обкладаються митом, але обкладається податком з продажу. Посилки зі значенням вище цього значення обкладається і митом і податком з продажів.
+              .country__btn
+                a(href="#").site-btn Відправити
+            .country__right
+              .country__info-list
+                .country__info
+                  .country__info-title Експрес доставка
+                  .country__info-txt 3 - 7 днів
+                .country__info
+                  .country__info-title Економ доставка
+                  .country__info-txt 14 - 22 днів
+
+
+
+    .section-country-calculator.lazyload
+      .container
+        .site-title
+          h1.site-title-txt.main-title
+            | Розрахувати своє&nbsp;
+            span відправлення
+
+        .calculator-block
+          .calculator-block__inner
+            .calculator-block__items
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-sm-12
+                .calculator-block__name Відправити звідки...
+                .calculator-block__select
+                  select.form-select
+                    option(value='Велікобританія') Велікобританія
+                    option(value='Україна') Україна
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-sm-12
+                .calculator-block__name Доставити куди...
+                .calculator-block__select
+                  select.form-select
+                    option(value='Оберіть') Оберіть
+                    option(value='Україна') Україна
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-sm-12
+                .calculator-block__select-wrap.calculator-block__select-wrap--column.dimensions
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Вага
+                    .calculator-block__input
+                      input(type='text')
+                      span кг
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Довжина
+                    .calculator-block__input
+                      input(type='text')
+                      span см
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Ширина
+                    .calculator-block__input
+                      input(type='text')
+                      span см
+                  .calculator-block__select-item.calculator-block__select-item--col-3.calculator-block__select-item--col-sm-6
+                    .calculator-block__name Висота
+                    .calculator-block__input
+                      input(type='text')
+                      span см
+              .calculator-block__item.calculator-block__item--col-5.calculator-block__item--col-md-7.calculator-block__item--col-sm-12
+                .calculator-block__name Індекс
+                  a(href='#').calculator-block__name--quest Потрібна допомога?
+                    include ../img/home/help.svg
+                .calculator-block__select-wrap
+                  .calculator-block__select-item.calculator-block__select-item--col-8.calculator-block__select-item--col-sm-12
+                    .calculator-block__input
+                      input(type='text' placeholder='Наприклад: 10001')
+                  .calculator-block__select-item.calculator-block__select-item--col-4.calculator-block__select-item--col-sm-12
+                    a(href="#").site-btn Розрахувати
+            .calculator-block__footer
+              .calculator-block__footer__left
+                .calculator-block__footer-totals
+                  .calculator-block__footer-total Стандартна доставка:
+                    span $5
+                  .calculator-block__footer-total Експрес:
+                    span $10
+
+
+        
+    
