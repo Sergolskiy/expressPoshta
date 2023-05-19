@@ -2118,11 +2118,11 @@
         color: #FFFFFF;
 
         &:nth-child(1) {
-          width: 25%;
+          width: 22%;
         }
 
         &:nth-child(2) {
-          width: 30%;
+          width: 31%;
         }
 
         &:nth-child(3) {
@@ -2157,6 +2157,10 @@
     line-height: 30px !important;
   }
 
+
+}
+
+.search-statuses {
   span {
     display: flex;
     align-items: center;
@@ -2164,7 +2168,7 @@
     &:before {
       content: '';
       display: inline-block;
-      width: 14px;
+      min-width: 14px;
       height: 14px;
       border-radius: 50%;
       margin-right: 20px;
@@ -2208,6 +2212,54 @@
     line-height: 30px;
     color: #292B4F;
   }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  &__item {
+    width: 50%;
+    padding: 0 15px 10px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #292B4F;
+
+    @include for-550 {
+      width: 100%;
+
+      &:last-child .search-mobile__txt {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dcdde5;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #dcdde5;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__date {
+    width: 50%;
+  }
+
+  &__status {
+    width: 50%;
+
+    span {
+      font-weight: 700;
+      &:before {
+        margin-right: 10px;
+      }
+    }
+  }
+
 }
 
 
@@ -2240,7 +2292,11 @@
   }
 }
 
+.country-page,
+.calculator-page,
+.delivery-terms,
 .tariffs-page,
+.blog,
 .about-us {
   @include for-550 {
 
@@ -2727,6 +2783,10 @@
     @include for-992 {
       margin: 20px auto 0;
     }
+
+    @include for-550 {
+      margin: 20px 0 0;
+    }
   }
 
 }
@@ -2735,29 +2795,54 @@
   .site-title-txt.main-title span {
     text-transform: initial;
   }
+
+  @include for-992 {
+    margin-top: 30px;
+  }
 }
 
 .blog-list {
 
+  @include for-992 {
+    margin-top: 20px;
+  }
+
   &__items {
     margin-top: 35px;
     border-bottom: 1px solid #dcdde5;
+
+    @include for-992 {
+      margin-top: 0;
+    }
   }
 
   &__item {
     display: flex;
     margin-bottom: 30px;
+
+    @include for-992 {
+      flex-direction: column;
+    }
   }
 
   &__left {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__right {
     padding-left: 20px;
     padding-top: 32px;
+
+    @include for-992 {
+      padding-left: 0;
+      padding-top: 20px;
+    }
   }
 
   &__date {
@@ -2781,6 +2866,10 @@
     line-height: 25px;
     color: #292B4F;
     margin-top: 7px;
+
+    @include for-550 {
+      display: none;
+    }
   }
 
   &__btn {
@@ -2792,6 +2881,10 @@
     height: 50px;
     background: #E6EEFF;
     border-radius: 90px;
+
+    @include for-550 {
+      margin-top: 15px
+    }
 
     svg {
       margin-left: 3px;
@@ -3040,6 +3133,10 @@
   .site-title-caption {
     max-width: 835px;
   }
+
+  @include for-992 {
+    margin-top: 30px;
+  }
 }
 
 .section-delivery-terms-list {
@@ -3049,6 +3146,22 @@
 
   .delivery__item {
     width: 25%;
+
+    @include for-992 {
+      width: 33%;
+    }
+
+    @include for-768 {
+      width: 50%;
+    }
+
+    @include for-550 {
+      width: 100%;
+
+      svg {
+        display: none;
+      }
+    }
   }
 }
 
@@ -3059,6 +3172,57 @@
 
   .review-form {
     background: url('../img/delivery-terms/plane-form.svg') 20px center no-repeat;
+
+    @include for-550 {
+      margin-left: -15px;
+      margin-right: -15px;
+      background: transparent;
+    }
+
+  }
+
+  @include for-550 {
+
+    .review-form .site-title-txt {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 41px;
+    }
+
+    .section-delivery-terms-form .site-sub-title {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 41px;
+      margin-top: 0;
+    }
+
+    .review-form__inner {
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      padding: 30px 15px 50px;
+    }
+
+    .review-form__right {
+      background: rgba(176, 199, 255, 0.28);
+      border: 1px dashed rgba(24, 86, 164, 0.4);
+      border-radius: 10px;
+      padding: 25px 10px;
+    }
+  }
+
+}
+
+.calculator-page {
+  .page__content {
+    position: relative;
+    z-index: 10;
+  }
+
+  .page__wrapper {
+    @include for-550 {
+      background: #F4F6FE;
+    }
   }
 }
 
@@ -3066,15 +3230,30 @@
   .site-title-txt.main-title span {
     text-transform: initial;
   }
+
+  @include for-992 {
+    margin-top: 30px;
+  }
 }
 
 .section-calculator-page-form {
   background: url('../img/delivery-terms/plane-form.svg') 30px bottom no-repeat;
 
+  @include for-768 {
+    background: url(../img/delivery-terms/plane-form.svg) -10px 55px no-repeat;
+    background-size: contain;
+  }
+
   .review-form__inner {
     padding: 0;
     background: transparent;
     border: 0;
+  }
+
+  .site-sub-title {
+    font-size: 30px;
+    line-height: 41px;
+    margin-top: 15px;
   }
 }
 
@@ -3089,6 +3268,30 @@
   justify-content: center;
   margin-top: -94px;
 
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 435px;
+    margin-left: -250px;
+    width: 537px;
+    height: 537px;
+    background: #ffd250;
+    opacity: .2;
+    filter: blur(250px);
+    display: none;
+
+
+    @include for-550 {
+      display: block;
+    }
+  }
+
+  @include for-992 {
+    margin-top: 0;
+  }
+
   &__txt {
     font-weight: 800;
     font-size: 200px;
@@ -3096,6 +3299,11 @@
     text-align: center;
     text-transform: uppercase;
     color: #0F80CC;
+
+    @include for-550 {
+      font-size: 150px;
+      line-height: 204px;
+    }
   }
 
   &__subtitle {
@@ -3107,6 +3315,12 @@
     color: #292B4F;
     margin-top: -15px;
     margin-bottom: 5px;
+
+    @include for-550 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+    }
 
     span {
       font-weight: 300;
@@ -3121,6 +3335,11 @@
     text-align: center;
     color: #292B4F;
 
+    @include for-550 {
+      font-size: 16px;
+      line-height: 25px;
+    }
+
     p {
       margin-top: 20px;
     }
@@ -3128,6 +3347,10 @@
 
   &__btn {
     margin: 40px auto 0;
+
+    @include for-550 {
+      margin-bottom: 70px;
+    }
 
     .site-btn {
       padding: 14px 47px;
@@ -3259,10 +3482,21 @@
   &--greece .page__content{
     background: url('../img/countries/country-greece.svg') 55% 50px no-repeat;
   }
+
+  @include for-992 {
+    .page__content {
+      background: transparent;
+    }
+  }
 }
 
 
 .section-country {
+
+  @include for-992 {
+    margin-top: 30px;
+  }
+
   .site-title-txt {
     span {
       margin-left: 10px;
@@ -3271,11 +3505,56 @@
 }
 
 .country {
+  position: relative;
+  margin-bottom: 64px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 0;
+    margin-top: 0;
+    margin-left: -245px;
+    width: 537px;
+    height: 537px;
+    background: #ffd250;
+    opacity: .2;
+    filter: blur(250px);
+    display: none;
+
+
+    @include for-550 {
+      display: block;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 700px;
+    margin-right: -245px;
+    width: 537px;
+    height: 537px;
+    background: #009A49;
+    opacity: .2;
+    filter: blur(250px);
+    display: none;
+
+
+    @include for-550 {
+      display: block;
+    }
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 64px;
+
+    @include for-992 {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -3310,7 +3589,7 @@
   }
 
   &__right {
-
+    margin-top: 40px;
   }
 
   &__info-list {
@@ -3327,6 +3606,14 @@
     font-size: 18px;
     line-height: 20px;
     color: #292B4F;
+
+    @include for-992 {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__info-title {
