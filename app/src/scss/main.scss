@@ -16,6 +16,10 @@
 // @import './components/.scss';
 
 
+.page__content {
+  min-height: calc(100vh - 556px);
+}
+
 .site-btn {
   display: block;
   width: fit-content;
@@ -946,11 +950,19 @@
   }
 
   &__item-left {
-
+    @include for-550 {
+      width: 50%;
+    }
   }
 
   &__item-name {
     font-weight: 700;
+
+    @include for-550 {
+      span {
+        display: none;
+      }
+    }
   }
 
   &__item-txt {
@@ -960,6 +972,10 @@
 
   &__item-right {
     padding-right: 15px;
+
+    @include for-550 {
+      width: 50%;
+    }
   }
 
 }
@@ -2263,6 +2279,7 @@
 }
 
 
+.article-page,
 .country-page,
 .questions-page,
 .about-us,
@@ -2344,7 +2361,7 @@
   }
 
   @include for-550 {
-    padding-bottom: 250px;
+    padding-bottom: 260px;
     background: url(../img/home/who-we/plane-mob.svg) -10px 100% no-repeat,url(../img/home/who-we/map-mob.svg) 40% 100% no-repeat;
   }
 
@@ -2367,6 +2384,15 @@
 
   .who-we__txt {
     max-height: 100%;
+
+    @include for-550 {
+      font-size: 18px;
+      line-height: 30px;
+
+      p {
+        margin-bottom: 9px;
+      }
+    }
 
     &::after {
       display: none;
@@ -2417,6 +2443,10 @@
     .review-slider__nav {
       margin-top: 45px;
       justify-content: flex-end;
+
+      @include for-550 {
+        margin-top: 22px;
+      }
     }
   }
 
@@ -2424,6 +2454,10 @@
 
 .reviews {
   margin-top: 70px;
+
+  @include for-550 {
+    margin-top: 0;
+  }
 
   .swiper-slide {
     position: relative;
@@ -2457,6 +2491,10 @@
 
     @include for-992 {
       line-height: 41px;
+    }
+
+    @include for-550 {
+      font-size: 30px;
     }
   }
 
@@ -2496,6 +2534,7 @@
 
     @include for-550 {
       max-width: 550px;
+      padding: 23px 3px 23px 19px;
     }
   }
 
@@ -2537,6 +2576,12 @@
     font-size: 18px;
     line-height: 25px;
     color: #292B4F;
+
+    @include for-550 {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
 }
@@ -2561,6 +2606,10 @@
     @include for-992 {
       margin-top: 0;
       line-height: 41px;
+    }
+
+    @include for-550 {
+      font-size: 30px;
     }
   }
 
@@ -2601,7 +2650,7 @@
     }
 
     @include for-550 {
-      margin: 20px auto 0;
+      margin: 23px auto 0;
     }
   }
 
@@ -2663,6 +2712,12 @@
     margin-bottom: 16px;
     border: 0;
 
+    @include for-550 {
+      margin-top: 3px;
+      padding: 8px 10px;
+      margin-bottom: 6px;
+    }
+
     &::placeholder {
       font-weight: 400;
       font-size: 17px;
@@ -2687,6 +2742,8 @@
 
     @include for-550 {
       height: 155px;
+      margin-top: 3px;
+      padding: 7px 7px;
     }
 
     &::placeholder {
@@ -2925,6 +2982,14 @@
     text-transform: initial;
   }
 
+  .site-title-txt.main-title {
+    @include for-550 {
+      letter-spacing: 0;
+      font-size: 30px;
+      line-height: 41px;
+    }
+  }
+
   @include for-992 {
     position: relative;
     margin-top: 30px;
@@ -3158,7 +3223,7 @@
     @include for-550 {
       width: 100%;
 
-      svg {
+      & .delivery__item-inner > svg {
         display: none;
       }
     }
@@ -3189,10 +3254,10 @@
       line-height: 41px;
     }
 
-    .section-delivery-terms-form .site-sub-title {
-      font-weight: 500;
+    .site-sub-title {
+      font-weight: 700;
       font-size: 25px;
-      line-height: 41px;
+      line-height: 34px;
       margin-top: 0;
     }
 
@@ -3234,10 +3299,17 @@
   @include for-992 {
     margin-top: 30px;
   }
+
+  @include for-550 {
+    .site-title-txt span {
+      display: block;
+    }
+  }
 }
 
 .section-calculator-page-form {
-  background: url('../img/delivery-terms/plane-form.svg') 30px bottom no-repeat;
+  background: url(../img/delivery-terms/plane-form.svg) 30px bottom no-repeat;
+  background-size: 28%;
 
   @include for-768 {
     background: url(../img/delivery-terms/plane-form.svg) -10px 55px no-repeat;
@@ -3254,6 +3326,11 @@
     font-size: 30px;
     line-height: 41px;
     margin-top: 15px;
+  }
+
+  .review-form .site-title-txt {
+    margin-top: 15px;
+    margin-right: 20px;
   }
 }
 
@@ -3366,10 +3443,53 @@
 }
 
 .section-questions {
+  
+  @include for-992 {
+    position: relative;
+    margin-top: 30px;
 
+    .site-title-txt.main-title {
+      letter-spacing: 0;
+    }
+
+    .site-title-txt.main-title span {
+      text-transform: initial;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 595px;
+      height: 595px;
+      left: -90px;
+      top: 100px;
+      background: #FFD250;
+      opacity: 0.2;
+      filter: blur(250px);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 595px;
+      height: 595px;
+      right: -190px;
+      top: 750px;
+      background: #009A49;;
+      filter: blur(250px);
+      opacity: .2;
+    }
+  }
 }
 
 .questions {
+  position: relative;
+  z-index: 2;
+
+  @include for-992 {
+    margin-bottom: 100px;
+  }
+
 
   &__inner {
     margin-top: 27px;
@@ -3377,10 +3497,20 @@
 
   &__items {
     max-width: 50%;
+
+    @include for-992 {
+      max-width: 100%;
+    }
   }
 
   &__item {
     position: relative;
+
+    @include for-992 {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #dcdde5;
+    }
 
     &.active {
       .questions__link {
@@ -3388,24 +3518,45 @@
         border-left: 3px solid #0F80CC;
       }
 
+      .questions__link {
+        color: #000000;
+
+        @include for-992 {
+          padding: 13px 5px 13px 20px;
+        }
+      }
+
       .questions__txt {
         visibility: visible;
         opacity: 1;
         z-index: 1;
+
+        @include for-992 {
+          max-height: 1000px;
+          padding-top: 15px;
+        }
       }
     }
   }
 
   &__link {
-    display: block;
+    display: flex;
+    align-items: center;
     font-weight: 700;
     font-size: 18px;
-    line-height: 60px;
-    color: #000000;
+    line-height: 24px;
+    height: 60px;
     margin-bottom: 10px;
     padding-left: 30px;
     border-radius: 10px;
     transition: 0.3s;
+    color: #0F80CC;
+
+    @include for-992 {
+      margin-bottom: 0;
+      height: auto;
+      padding: 0 5px 13px 0;
+    }
   }
 
   &__txt {
@@ -3426,6 +3577,18 @@
     line-height: 30px;
     color: #292B4F;
 
+    @include for-992 {
+      position: static;
+      margin-left: 0;
+      padding: 0;
+      border: 0;
+      visibility: visible;
+      z-index: 1;
+      opacity: 1;
+      max-height: 0;
+      overflow: hidden;
+    }
+
     &::after {
       content: '';
       display: block;
@@ -3439,6 +3602,10 @@
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
       background: #f4f6fe;
+
+      @include for-992 {
+        display: none;
+      }
     }
 
     &--top {
@@ -3499,7 +3666,8 @@
 
   .site-title-txt {
     span {
-      margin-left: 10px;
+      text-transform: initial;
+      //margin-left: 10px;
     }
   }
 }
@@ -3558,7 +3726,7 @@
   }
 
   &__left {
-    max-width: 1070px;
+    max-width: 1280px;
     margin-right: 30px;
   }
 
@@ -3589,7 +3757,11 @@
   }
 
   &__right {
-    margin-top: 40px;
+    margin-top: -50px;
+
+    @include for-992 {
+      margin-top: 40px;
+    }
   }
 
   &__info-list {
@@ -3626,6 +3798,72 @@
   }
 
 }
+
+.section-country-calculator {
+  @include for-992 {
+    margin-bottom: 100px;
+  }
+}
+
+.section-article {
+  max-width: 1310px;
+  margin: 0 auto;
+
+  @include for-992 {
+    margin-top: 30px;
+  }
+
+  .site-title-txt.main-title span {
+    text-transform: initial;
+  }
+}
+
+.article {
+
+
+  &__inner {
+
+  }
+
+  &__image {
+    margin-top: 30px;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__date {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #1E90FF;
+  }
+
+  &__txt {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #292B4F;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    b {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+}
+
+
+
 
 
 
