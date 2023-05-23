@@ -2532,6 +2532,10 @@
     background: white;
     border-radius: 10px;
 
+    @include for-1100 {
+      max-width: 450px;
+    }
+
     @include for-550 {
       max-width: 550px;
       padding: 23px 3px 23px 19px;
@@ -2893,6 +2897,7 @@
   }
 
   &__right {
+    max-width: 1285px;
     padding-left: 20px;
     padding-top: 32px;
 
@@ -3171,6 +3176,17 @@
 
   @include for-992 {
     margin-top: 40px;
+
+    .site-title-txt {
+      font-size: 30px;
+      line-height: 41px;
+    }
+  }
+
+  @include for-480 {
+    .site-title-txt span {
+      display: block;
+    }
   }
 }
 
@@ -3800,8 +3816,26 @@
 }
 
 .section-country-calculator {
+
+  .site-title-txt {
+    span {
+      text-transform: initial;
+    }
+  }
   @include for-992 {
     margin-bottom: 100px;
+
+    .site-title-txt {
+      font-size: 30px;
+      line-height: 41px;
+      letter-spacing: 0;
+      
+      span {
+        @include for-550 {
+          display: block;
+        }
+      }
+    }
   }
 }
 
