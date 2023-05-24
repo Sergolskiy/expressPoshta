@@ -1730,6 +1730,10 @@
   @include for-992 {
     margin-top: 30px;
   }
+
+  @include from-992 {
+    margin-bottom: -30px;
+  }
 }
 
 .contacts {
@@ -1923,11 +1927,9 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 25px;
-      color: #292B4F;
+      //color: #292B4F;
 
-      @include for-768 {
-        color: #0F80CC;
-      }
+      color: #0F80CC;
     }
   }
 
@@ -1997,6 +1999,7 @@
     }
 
     span {
+      display: block;
       font-weight: 700;
 
       @include for-992 {
@@ -2511,6 +2514,14 @@
     width: 100%;
     max-width: 1275px;
     margin-left: 20px;
+
+    @include for-1600 {
+      max-width: 1090px;
+    }
+
+    @include for-1100 {
+      max-width: 700px;
+    }
 
     @include for-768 {
       margin-left: 0;
