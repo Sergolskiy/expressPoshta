@@ -235,7 +235,7 @@
 </defs>
     <style>
         .anim {
-        animation: blink 3s linear infinite;
+        animation: blink 4s linear infinite;
         }
 
         @keyframes blink {
