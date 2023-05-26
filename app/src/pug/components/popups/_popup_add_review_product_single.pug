@@ -4,48 +4,11 @@ block vars
     - var popupName = "add-review-product";
 
 block title
-    .popup__title Додати відгук
+    .popup__title Успішно відправлено
 block content
-    .popup-form
-        .add-rating
-            .add-rating__title Рейтинг
-            .add-rating__stars
-                .add-rating__star(data-score="1")
-                    include ../../../img/icons/rating_star_big.svg
-                .add-rating__star(data-score="2")
-                    include ../../../img/icons/rating_star_big.svg
-                .add-rating__star(data-score="3")
-                    include ../../../img/icons/rating_star_big.svg
-                .add-rating__star(data-score="4")
-                    include ../../../img/icons/rating_star_big.svg
-                .add-rating__star(data-score="5")
-                    include ../../../img/icons/rating_star_big.svg
-        .site-textarea
-            label.fw-normal Текст відгуку
-            textarea(placeholder="Печатайте тут")
-        .site-input
-            label.fw-normal Ім’я
-            input(type="text" placeholder="Ім’я")
-        .site-input
-            label.fw-normal Email
-            input(type="text" placeholder="Email")
-        div(style="max-width: 278px;")
-            .site-fileinput
-                .site-fileinput__wrap
-                    label.site-fileinput__img
-                        span.site-fileinput__placeholder
-                            span.site-fileinput__icon
-                                include ../../../img/icons/upload_icon.svg
-                            span.site-fileinput__text Перетяніть фото </br>сюди або
-                            span.site-fileinput__btn.btn.btn--blue.fw-bold Завантажити
-                            span.site-fileinput__descr До 2MB у png чи jpg
-                        input(type="file" accept="image/png, image/jpeg")
-                    a(href="javascript:void(0);").site-fileinput__delete-btn.d-none
-                        span.site-fileinput__delete-ico
-                            include ../../../img/icons/delete_dark.svg
-        .popup-form__controls
-            .popup-form__control
-                a(href="javascript:void(0);").btn.fw-bold.popup-form__btn.popup-form__btn--small Додати
+    .popup-txt
+        h3 Ваше повідомлення успішно відправлено
+
 
 
 

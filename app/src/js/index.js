@@ -131,6 +131,33 @@ function initFileBtn() {
     })
 }
 
+function initPopups() {
+    var popupOpenTriggers = document.querySelectorAll('[data-open]');
+    popupOpenTriggers.forEach(function (item) {
+        item.addEventListener('click', function () {
+            var popup = document.querySelector("[data-popup=\"".concat(item.getAttribute('data-open'), "\"]"));
+
+            if (popup) {
+                document.querySelector('body').classList.add('hide-overflow');
+                popup.classList.add('open');
+            }
+        });
+    });
+    var popupCloseTriggers = document.querySelectorAll('.popup__close, [data-close]');
+    popupCloseTriggers.forEach(function (item) {
+        item.addEventListener('click', function () {
+            document.querySelector('body').classList.remove('hide-overflow');
+            item.closest('.popup').classList.remove('open');
+        });
+    });
+    document.addEventListener('click', function (e) {
+        if (e.target.classList.contains('popup')) {
+            document.querySelector('body').classList.remove('hide-overflow');
+            e.target.classList.remove('open');
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     initLanguageMenu()
@@ -138,6 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initShowMobileMenu()
     initTabs()
     initFileBtn()
+    initPopups()
+
+    // document.querySelector('.popup[data-popup="add-review-product"]').classList.add('open')
 
     $('.form-select').select2({
         minimumResultsForSearch: -1,

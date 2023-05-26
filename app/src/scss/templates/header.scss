@@ -428,7 +428,10 @@
   background: white;
   z-index: 20;
   transform: translateX(100%);
-  transition: 0.3s;
+
+  @include for-992 {
+    transition: 0.3s;
+  }
 
   &.open {
     transform: translateX(0);
